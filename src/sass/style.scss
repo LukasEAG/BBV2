@@ -26,6 +26,9 @@ nav {
 	height: 100px;
 	z-index: 10;
 }
+button {
+	cursor: pointer;
+}
 
 a {
 	text-decoration: none;
@@ -116,7 +119,7 @@ header video {
 .tickets {
 	background: url(../img/ticketsBg.png);
 	background-size: cover;
-	background-position: center;
+	background-position: top;
 	height: 100vh;
 	font-family: 'Retro-Computer', sans-serif;
 
@@ -125,12 +128,13 @@ header video {
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
+		justify-content: center;
 		gap: 4rem;
 		height: 100%;
 
 		& h2 {
+			margin: 8rem 0 0;
 			font-size: 3.2rem;
 			text-transform: uppercase;
 			color: var(--bb-white);
@@ -143,8 +147,9 @@ header video {
 		justify-content: space-between;
 		align-items: center;
 		gap: 1rem;
-		max-width: 1480px;
+		max-width: 1020px;
 		width: 100%;
+		height: 70%;
 	}
 
 	&__ticket {
@@ -155,16 +160,17 @@ header video {
 		& img {
 			width: 100%;
 			height: auto;
-			border-radius: 1.8rem;
+			max-width: 285px;
+			border-radius: 1.3rem;
 			box-shadow: 0px 0px 15px 2px #696969;
 		}
 
 		& button {
-			margin: 2rem auto 0;
-			padding: 1rem 2.4rem;
-			font-size: 2.5rem;
+			margin: 7rem auto 0;
+			padding: 1.2rem 2.4rem;
+			font-size: 1.5rem;
 			font-family: 'Retro-Computer', sans-serif;
-			border-radius: 2rem;
+			border-radius: 1.4rem;
 			border: none;
 			color: var(--bb-white);
 			box-shadow: 0 0 10px 0px #696969;
@@ -201,12 +207,12 @@ header video {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		max-width: 1600px;
+		max-width: 1350px;
 		height: 100%;
 		border-radius: 1.6rem;
 	}
 	&__localization-box {
-		padding: 2rem 3rem;
+		padding: 2.4rem 3.6rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -214,11 +220,11 @@ header video {
 
 		& h2 {
 			padding: 2.2rem 5rem;
-			font-size: 3.2rem;
+			font-size: 1.8rem;
 			text-transform: uppercase;
 			color: var(--bb-white);
-			border: 1px solid var(--bb-salmon);
-			border-radius: 1.2rem;
+			border: 5px solid #cdacc1;
+			border-radius: 1.4rem;
 		}
 	}
 	&__header {
@@ -227,8 +233,8 @@ header video {
 
 	&__title {
 		padding: 2rem 0;
-		color: var(--bb-red);
-		font-size: 2.5rem;
+		color: var(--bb-pink-light);
+		font-size: 1.8rem;
 		text-transform: uppercase;
 		width: 100%;
 	}
@@ -241,9 +247,10 @@ header video {
 			color: var(--bb-white);
 			border: 1px solid var(--bb-white);
 			border-radius: 1rem;
-			font-size: 1.9rem;
+			font-size: 1.4rem;
 			font-weight: 900;
 			text-transform: uppercase;
+			border: none;
 			transition: background 0.4s, color 0.4s;
 			cursor: pointer;
 
@@ -273,7 +280,7 @@ header video {
 
 		& span {
 			color: var(--bb-white);
-			font-size: 3.2rem;
+			font-size: 1.8rem;
 			font-weight: 700;
 			text-transform: uppercase;
 		}
@@ -285,7 +292,10 @@ header video {
 		height: 30%;
 	}
 	&__bbtv {
-		font-size: 3rem;
+		max-width: 210px;
+		font-size: 2.4rem;
+		text-align: center;
+		color: var(--bb-white);
 	}
 	&__yt {
 		max-width: 220px;
@@ -296,80 +306,206 @@ header video {
 	}
 }
 
-.media {
-	margin: 4rem 2rem;
+.info {
 	position: relative;
+	height: 100vh;
+	background: url(../img/infoBg.png);
+	background-size: cover;
+	background-position: center;
 
-	&__box {
-		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		max-width: 1600px;
-	}
-
-	&__box-top,
-	&__box-bottom {
-		display: flex;
-		border-radius: 1.6rem;
-		aspect-ratio: 3 / 1;
-	}
-
-	&__box-top {
-		flex-direction: row;
-		gap: 2rem;
-	}
-
-	&__box-left,
-	&__box-right {
-		padding: 2rem 5rem;
-		width: 50%;
-		border-radius: 2rem;
-	}
-
-	&__box-left {
-		background: url(../img/mediaBoxLeft.png);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-
-		& h3 {
-			font-size: 2rem;
-			text-transform: uppercase;
-			color: var(--bb-white);
-		}
-	}
-
-	&__box-right {
+	&__container {
 		display: flex;
 		justify-content: center;
-		align-items: end;
-		background: url(../img/mediaBoxRight.png);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
 
-		& span {
-			font-size: 2rem;
-			text-transform: uppercase;
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		max-width: 992px;
+		height: 50%;
+	}
+	&__title {
+		h2 {
+			font-size: 3.4rem;
 			color: var(--bb-white);
 		}
 	}
-	&__box-bottom {
-		margin: 5rem 0 0;
-		max-height: 589px;
-		background: url(../img/mediaBoxSocials.png);
+
+	&__faq {
+		margin: 0 0 10rem;
+		padding: 0 4rem;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		width: 100%;
+
+		& button {
+			padding: 2rem 0;
+			border-radius: 1.2rem;
+			border: none;
+			font-size: 1.8rem;
+			font-family: 'Retro-Computer', sans-serif;
+			color: var(--bb-white);
+
+			&:nth-of-type(1) {
+				background: var(--bb-pink-light);
+			}
+			&:nth-of-type(2) {
+				background: var(--bb-green);
+			}
+			&:nth-of-type(3) {
+				background: var(--bb-blue);
+			}
+			&:nth-of-type(4) {
+				background: var(--bb-purple);
+			}
+		}
+	}
+}
+
+.email {
+	position: relative;
+	height: 100vh;
+	background: url(../img/emailBg.png);
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../img/emailHeroBg.png);
 		background-size: cover;
-		background-repeat: no-repeat;
 		background-position: center;
+		opacity: 0.6;
+		z-index: -1;
+		content: '';
+	}
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
 	}
 
-	&__box-social-left {
-		padding: 4rem 0 0 5rem;
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 640px;
+		height: 100%;
+	}
+	&__logo {
+		& img {
+			width: 100%;
+			height: auto;
+			max-width: 150px;
+		}
+	}
+	&__title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 15%;
+		width: 100%;
+
+		& h2 {
+			margin: 0 4rem 0 0;
+			display: block;
+			font-size: 4.2rem;
+			color: var(--bb-white);
+			word-spacing: 150px;
+		}
+	}
+
+	&__form {
+		padding: 5rem 3rem 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 2rem;
+		height: 59%;
+
 		& h3 {
 			font-size: 2rem;
-			text-transform: uppercase;
 			color: var(--bb-white);
+		}
+
+		& form {
+			display: grid;
+			grid-template-rows: repeat(3, 1fr);
+
+			& input[type='text'] {
+				margin: 1rem 0;
+				padding: 2rem;
+				height: 60px;
+				border-radius: 1.2rem;
+				line-height: 0.4rem;
+				border: none;
+
+				&::placeholder {
+					font-family: 'VHSGothic', sans-serif;
+					font-size: 1.7rem;
+					text-transform: uppercase;
+					color: var(--bb-pink);
+				}
+			}
+		}
+
+		& button {
+			padding: 2rem 5rem;
+			color: var(--bb-white);
+			background: var(--bb-purple);
+			border-radius: 1.2rem;
+			border: none;
+			font-size: 1.8rem;
+			text-transform: uppercase;
+			font-family: 'VHSGothic', sans-serif;
+		}
+	}
+	&__agree-box {
+		position: relative;
+		padding: 2rem 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		user-select: none;
+
+		& label {
+			font-size: 0.9rem;
+			color: var(--bb-white);
+		}
+
+		& input[type='checkbox'] {
+			position: absolute;
+			opacity: 0;
+			height: 25px;
+			width: 22px;
+		}
+
+		& span {
+			margin-right: 1rem;
+			display: inline-block;
+			background-color: white;
+			box-sizing: border-box;
+			width: 40px;
+			height: 25px;
+			border-radius: 0.2rem;
+
+			&:has(> input:checked) {
+				background-color: var(--bb-purple);
+			}
 		}
 	}
 }

@@ -10,7 +10,7 @@
         content="Blisko siebie, blisko muzyki, blisko Brzegu.  „Blisko Brzegu” to plenerowe wydarzenie muzyczne łączące elektroniczne brzmienia z bliskością natury. W kameralnej atmosferze, z dala od miejskiego zgiełku, tworzymy festiwal dla Ciebie. ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="LA DotCreation">
-    <meta property="og:image" content="../dist/img/bboglogo.png">
+    <meta property="og:image" content="./dist/img/bboglogo.png">
     <meta property="og:title" content="Blisko Muzyki, Blisko Siebie, Blisko Brzegu. Festiwal Dargocice 19/07/2025">
 
     <title>Blisko Brzegu Fest</title>
@@ -32,9 +32,9 @@
     <div class="nav-menu">
         <div class="nav-menu__logo"></div>
         <ul class="nav-menu__links">
-            <li class="nav-menu__link"><a href="">News</a></li>
+            <li class="nav-menu__link"><a href="#email">News</a></li>
             <li class="nav-menu__link"><a href="#line-up">Artysci</a></li>
-            <li class="nav-menu__link"><a href="">Info</a></li>
+            <li class="nav-menu__link"><a href="#info">Info</a></li>
             <li class="nav-menu__link"><a href="#tickets">Bilety</a></li>
             <li class="nav-menu__link"><a href="">Kontakt</a></li>
         </ul>
@@ -114,26 +114,53 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div class="media">
+        <section id="info">
+            <div class="info">
                 <div class="wrapper">
-                    <div class="media__box">
-                        <div class="media__box-top">
-                            <div class="media__box-left">
-                                <h3>BliskoBrzegu TV</h2>
-                                    <img src="" alt="">
+                    <div class="info__container">
+                        <div class="info__box">
+                            <div class="info__title">
+                                <h2>TWOJ PRZEWODNIK DO NAJLEPSZEJ ZABAWY</h2>
                             </div>
-                            <div class="media__box-right">
-                                <span>Twoj festiwalowy przewodnik</span>
+                            <div class="info__faq">
+                                <button>FESTIWALOWY PRZEWODNIK</button>
+                                <button>REGULAMIN</button>
+                                <button>BILETY</button>
+                                <button>FAQ</button>
                             </div>
                         </div>
-                        <div class="media__box-bottom">
-
-                            <div class="media__box-social-left">
-                                <h3>Obserwuj nas na socialach</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="email">
+            <div class="email">
+                <div class="wrapper">
+                    <div class="email__container">
+                        <div class="email__box">
+                            <div class="email__logo">
+                                <img src="./dist/img/emailBBLogo.svg" alt="">
                             </div>
-                            <div class="media__box-social-right"></div>
+                            <div class="email__title">
+                                <h2>Zapisz Maila</h2>
+                            </div>
+                            <div class="email__form">
+                                <h3>Badz zawsze pierwszy</h3>
+                                <form action="">
+                                    <input type="text" placeholder="Wpisz Imie">
+                                    <input type="text" placeholder="Adres Email">
+                                    <div class="email__agree-box">
+                                        <span class="input-checkbox"> <input type="checkbox" id="agree"></span>
+                                        <label for="agree">
+                                            Wyrażam zgodę na otrzymywanie od EAG właściciela marki BLISKO BRZEGU
+                                            informacji
+                                            o aktualnościach, nowościach i promocjach na podany adres e-mail. </label>
 
+
+                                    </div>
+                                </form>
+                                <button>Zapisz Mail</button>
+                            </div>
                         </div>
                     </div>
                 </div>
