@@ -1,0 +1,118 @@
+@mixin queries {
+	@media screen and (max-width: 992px) {
+		.nav-menu {
+			justify-content: flex-end;
+
+			&__mobile {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				& button {
+					color: var(--bb-white);
+					background-color: transparent;
+					border: none;
+					width: 40px;
+					cursor: pointer;
+				}
+			}
+
+			&__logo,
+			&__mobile,
+			&__others {
+				width: 30%;
+			}
+
+			&__links {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+				flex-direction: column;
+				justify-content: space-evenly;
+				width: 100vw;
+				height: 100vh;
+				background: white;
+			}
+		}
+	}
+	@media screen and (max-width: 769px) {
+		.media {
+			&__box-top,
+			&__box-bottom {
+				flex-direction: column;
+				aspect-ratio: 2 / 3;
+				height: 100%;
+			}
+			&__box-left,
+			&__box-right,
+			&__box-social-left {
+				padding: 2rem;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	@media screen and (max-width: 600px) {
+		.localization {
+			&__box {
+				h2 {
+					padding: 1rem 2.2rem;
+					font-size: 1.2rem;
+					text-align: center;
+					line-height: 1.8;
+				}
+			}
+		}
+		.line-up {
+			&__box {
+				padding: 2rem;
+			}
+
+			&__btns {
+				& button {
+					padding: 1.2rem 2rem;
+				}
+			}
+
+			&__artist-box {
+				& span {
+					font-size: 1.2rem;
+					text-align: center;
+					line-height: 2;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 565px) {
+		nav {
+			height: 60px;
+		}
+		.nav-menu {
+			&__mobile {
+				& button {
+					width: 30px;
+				}
+			}
+			&__others-link {
+				padding: 1rem 1.2rem;
+				font-size: 1.2rem;
+			}
+		}
+		.tickets {
+			padding: 2rem 0 4rem;
+			height: auto;
+
+			&__container h2 {
+				font-size: 2.3rem;
+			}
+			&__box {
+				flex-direction: column;
+				gap: 4rem;
+			}
+			&__ticket img {
+				max-width: 280px;
+			}
+		}
+	}
+}

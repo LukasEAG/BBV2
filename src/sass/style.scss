@@ -1,0 +1,377 @@
+@use '../sass/colors' as *;
+@use '../sass/fonts' as *;
+@use '../sass/media';
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Retro-Computer', sans-serif;
+}
+
+body {
+	position: relative;
+	background: var(--bb-nav);
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	z-index: 10;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+li {
+	list-style: none;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	height: 100%;
+}
+.nav-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+
+	& a,
+	button,
+	li {
+		cursor: pointer;
+	}
+
+	&__mobile {
+		display: none;
+	}
+
+	&__logo,
+	&__others {
+		width: 20%;
+	}
+
+	&__links {
+		padding: 0.5rem 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 60%;
+		height: 100%;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		color: var(--bb-white);
+	}
+
+	&__link {
+		padding: 1rem 2rem;
+		background: var(--bb-grey);
+		border-radius: 0.5rem;
+		transition: background 0.4s;
+
+		&:hover {
+			background: var(--bb-green);
+		}
+	}
+
+	&__others {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__others-link {
+		padding: 2rem 2.6rem;
+		background: var(--bb-purple);
+		color: var(--bb-white);
+		border-radius: 0.5rem;
+		font-size: 1.4rem;
+		font-weight: 600;
+		transition: background 0.4s;
+
+		&:hover {
+			background: var(--bb-white);
+			color: var(--bb-nav);
+		}
+	}
+}
+
+header video {
+	max-height: 100vh;
+	object-fit: cover;
+	overflow-clip-margin: content-box;
+	overflow: clip;
+}
+.tickets {
+	background: url(../img/ticketsBg.png);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	font-family: 'Retro-Computer', sans-serif;
+
+	&__container {
+		padding: 3rem 0 0;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 4rem;
+		height: 100%;
+
+		& h2 {
+			font-size: 3.2rem;
+			text-transform: uppercase;
+			color: var(--bb-white);
+		}
+	}
+
+	&__box {
+		padding: 0 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		max-width: 1480px;
+		width: 100%;
+	}
+
+	&__ticket {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		& img {
+			width: 100%;
+			height: auto;
+			border-radius: 1.8rem;
+			box-shadow: 0px 0px 15px 2px #696969;
+		}
+
+		& button {
+			margin: 2rem auto 0;
+			padding: 1rem 2.4rem;
+			font-size: 2.5rem;
+			font-family: 'Retro-Computer', sans-serif;
+			border-radius: 2rem;
+			border: none;
+			color: var(--bb-white);
+			box-shadow: 0 0 10px 0px #696969;
+			transition: background 0.4s, color 0.4s;
+			cursor: pointer;
+		}
+		&:nth-of-type(1) button {
+			background: var(--bb-purple-light);
+		}
+		&:nth-of-type(2) button {
+			background: var(--bb-green-light);
+		}
+		&:nth-of-type(3) button {
+			background: var(--bb-pink-light);
+		}
+
+		& button:hover {
+			background: var(--bb-white);
+			color: var(--bb-black);
+		}
+	}
+}
+
+.line-up {
+	position: relative;
+	height: 100vh;
+	background: url(../img/lineUpBg.png);
+	background-size: cover;
+	background-position: center;
+
+	&__box {
+		margin: 0 auto;
+		padding: 10rem 5rem;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 1600px;
+		height: 100%;
+		border-radius: 1.6rem;
+	}
+	&__localization-box {
+		padding: 2rem 3rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 20%;
+
+		& h2 {
+			padding: 2.2rem 5rem;
+			font-size: 3.2rem;
+			text-transform: uppercase;
+			color: var(--bb-white);
+			border: 1px solid var(--bb-salmon);
+			border-radius: 1.2rem;
+		}
+	}
+	&__header {
+		display: flex;
+	}
+
+	&__title {
+		padding: 2rem 0;
+		color: var(--bb-red);
+		font-size: 2.5rem;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	&__btns {
+		display: flex;
+		gap: 2rem;
+
+		& button {
+			padding: 2rem 2.4rem;
+			color: var(--bb-white);
+			border: 1px solid var(--bb-white);
+			border-radius: 1rem;
+			font-size: 1.9rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			transition: background 0.4s, color 0.4s;
+			cursor: pointer;
+
+			&:nth-of-type(1) {
+				background: var(--bb-purple);
+
+				&:hover {
+					background: var(--bb-white);
+					color: var(--bb-purple);
+				}
+			}
+			&:nth-of-type(2) {
+				background: var(--bb-red);
+				&:hover {
+					background: var(--bb-white);
+					color: var(--bb-red);
+				}
+			}
+		}
+	}
+	&__artist-box {
+		padding: 2rem 0;
+		display: flex;
+		align-items: center;
+		align-self: center;
+		height: 50%;
+
+		& span {
+			color: var(--bb-white);
+			font-size: 3.2rem;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		height: 30%;
+	}
+	&__bbtv {
+		font-size: 3rem;
+	}
+	&__yt {
+		max-width: 220px;
+		& img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.media {
+	margin: 4rem 2rem;
+	position: relative;
+
+	&__box {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 1600px;
+	}
+
+	&__box-top,
+	&__box-bottom {
+		display: flex;
+		border-radius: 1.6rem;
+		aspect-ratio: 3 / 1;
+	}
+
+	&__box-top {
+		flex-direction: row;
+		gap: 2rem;
+	}
+
+	&__box-left,
+	&__box-right {
+		padding: 2rem 5rem;
+		width: 50%;
+		border-radius: 2rem;
+	}
+
+	&__box-left {
+		background: url(../img/mediaBoxLeft.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		& h3 {
+			font-size: 2rem;
+			text-transform: uppercase;
+			color: var(--bb-white);
+		}
+	}
+
+	&__box-right {
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		background: url(../img/mediaBoxRight.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		& span {
+			font-size: 2rem;
+			text-transform: uppercase;
+			color: var(--bb-white);
+		}
+	}
+	&__box-bottom {
+		margin: 5rem 0 0;
+		max-height: 589px;
+		background: url(../img/mediaBoxSocials.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&__box-social-left {
+		padding: 4rem 0 0 5rem;
+		& h3 {
+			font-size: 2rem;
+			text-transform: uppercase;
+			color: var(--bb-white);
+		}
+	}
+}
+
+@include media.queries;
