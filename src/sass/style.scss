@@ -308,10 +308,9 @@ header video {
 
 .info {
 	position: relative;
-	height: 100dvh;
 	background: url(../img/infoBg.png);
 	background-size: cover;
-	background-position: 50% 25%;
+	aspect-ratio: 16 / 9;
 
 	&__container {
 		display: flex;
