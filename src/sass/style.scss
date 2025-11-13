@@ -200,6 +200,46 @@ header video {
 	background: url(../img/lineUpBg.png);
 	background-size: cover;
 	background-position: center;
+	z-index: 0;
+
+	.line-up-graphs {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	.crown,
+	.smileFace {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.crown {
+		background: url(../../dist/img/crown.svg);
+		background-size: 13%;
+		background-position: top right;
+		background-repeat: no-repeat;
+	}
+	.smileFace {
+		background: url(../../dist/img/smileFace.svg);
+		background-size: calc(10% + 10vw);
+		background-position: bottom -12% left -5%;
+		background-repeat: no-repeat;
+	}
+	.line-up-graphs .tv {
+		position: absolute;
+		max-width: 500px;
+		width: 100%;
+		height: auto;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 
 	&__box {
 		margin: 0 auto;
@@ -210,6 +250,7 @@ header video {
 		max-width: 1350px;
 		height: 100%;
 		border-radius: 1.6rem;
+		z-index: 10;
 	}
 	&__localization-box {
 		padding: 2.4rem 3.6rem;
@@ -308,9 +349,33 @@ header video {
 
 .info {
 	position: relative;
-	background: url(../img/infoBg.png);
+	background: url(../img/faqBg.png);
 	background-size: cover;
-	aspect-ratio: 16 / 9;
+	height: 100vh;
+	z-index: 0;
+
+	.xSmall,
+	.xArrows {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	.xSmall {
+		background: url(../../dist/img/xSmall.svg);
+		background-size: 3%;
+		background-position: top 5% right 5%;
+		background-repeat: no-repeat;
+	}
+	.xArrows {
+		background: url(../../dist/img/xArrows.svg);
+		background-size: 7%;
+		background-position: bottom 4% left 2%;
+		background-repeat: no-repeat;
+	}
 
 	&__container {
 		display: flex;
@@ -324,9 +389,20 @@ header video {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: space-evenly;
+		justify-content: space-around;
 		max-width: 992px;
-		height: 50%;
+		height: 100%;
+	}
+	&__smile,
+	&__kindness {
+		& img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__kindness {
+		max-width: 200px;
 	}
 	&__title {
 		h2 {
@@ -375,13 +451,27 @@ header video {
 	background-position: center;
 	z-index: 0;
 
+
+	.bar-code {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: url(../../dist/img/barCode.svg);
+		background-size: 180px;
+		background-position: center bottom 5px;
+		background-repeat: no-repeat;
+		opacity: .7;
+	}
 	&::before {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: url(../img/emailHeroBg.png);
+		background: url(../img/newsletterBg.png);
 		background-size: cover;
 		background-position: center;
 		opacity: 0.6;
@@ -397,9 +487,10 @@ header video {
 	}
 
 	&__box {
+		padding: 10rem 0 0;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-evenly;
 		align-items: center;
 		max-width: 640px;
 		height: 100%;
@@ -419,22 +510,28 @@ header video {
 		width: 100%;
 
 		& h2 {
-			margin: 0 4rem 0 0;
-			display: block;
+			display: flex;
+			align-items: center;
 			font-size: 4.2rem;
 			color: var(--bb-white);
-			word-spacing: 150px;
+
+			& img {
+				padding: 0 2rem;
+				width: 100%;
+				height: auto;
+				max-width: 180px;
+			}
 		}
 	}
 
 	&__form {
-		padding: 5rem 3rem 0;
+		padding: 0 3rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
 		gap: 2rem;
-		height: 59%;
+		height: 60%;
 
 		& h3 {
 			font-size: 2rem;
