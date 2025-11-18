@@ -30,140 +30,63 @@
 </head>
 <nav>
     <div class="nav-menu">
-        <div class="nav-menu__logo"></div>
-        <ul class="nav-menu__links">
-            <li class="nav-menu__link"><a href="#email">News</a></li>
-            <li class="nav-menu__link"><a href="#line-up">Artysci</a></li>
-            <li class="nav-menu__link"><a href="#info">Info</a></li>
-            <li class="nav-menu__link"><a href="#tickets">Bilety</a></li>
-            <li class="nav-menu__link"><a href="">Kontakt</a></li>
-        </ul>
-        <div class="nav-menu__mobile">
-            <button> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M4 6l16 0" />
-                    <path d="M4 12l16 0" />
-                    <path d="M4 18l16 0" />
-                </svg></button>
-        </div>
-        <div class="nav-menu__others">
-            <li class="nav-menu__others-link"><a href="" target=”_blank” rel=”noopener”>BB 2025</a></li>
+        <div class="nav-wrapper">
+            <div class="nav-menu__container">
+
+
+                <div class="nav-menu__others">
+                    <li class="nav-menu__others-link"><a href="" target=”_blank” rel=”noopener”>BB 2025</a></li>
+                </div>
+                <ul class="nav-menu__links">
+                    <li class="nav-menu__link"><a href="#email">News</a></li>
+                    <li class="nav-menu__link"><a href="#line-up">Artysci</a></li>
+                    <li class="nav-menu__link"><a href="#info">Info</a></li>
+                    <li class="nav-menu__link"><a href="#tickets">Bilety</a></li>
+                    <li class="nav-menu__link"><a href="">Kontakt</a></li>
+                </ul>
+                <div class="nav-menu__mobile">
+                    <button> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 6l16 0" />
+                            <path d="M4 12l16 0" />
+                            <path d="M4 18l16 0" />
+                        </svg></button>
+                </div>
+                <div class="nav-menu__logo">
+                    <img src="./dist/img/BBLogo.svg" alt="">
+                </div>
+            </div>
         </div>
     </div>
 </nav>
 
 <body>
     <header id="home">
-        <video width="100%" height="100%" autoplay="" loop="" muted="" playsinline="" preload="metadata"
-            poster="./dist/img/bbHero.png">
-            <source src="./dist/img/BBAF.mov">
-        </video>
+        <div class="video__box">
+            <video width="100%" height="100%" autoplay="" loop="" muted="" playsinline="" preload="metadata"
+                poster="./dist/img/bbHero.png">
+                <source src="./dist/img/BBAF.mov">
+            </video>
+        </div>
+
     </header>
     <main>
-        <section id="tickets">
-            <div class="tickets">
-                <div class="wrapper">
-                    <div class="tickets__container">
-                        <h2>Bilety:</h2>
-                        <div class="tickets__box">
-                            <div class="tickets__ticket">
-                                <img src="./dist/img/ticketBasic.png" alt="Bilet na BB Fest pakiet Basic">
-                                <button>Kup Bilet</button>
-                            </div>
-                            <div class="tickets__ticket">
-                                <img src="./dist/img/ticketVIP.png" alt="Bilet na BB Fest w pakiecie VIP">
-                                <button>Kup Bilet</button>
-                            </div>
-                            <div class="tickets__ticket">
-                                <img src="./dist/img/ticketUltra.png"
-                                    alt="Bilet festiwal Blisko Brzegu w pakiecie Ultra">
-                                <button>Kup Bilet</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="line-up">
-            <div class="line-up">
-                <div class="wrapper">
-                    <div class="line-up-graphs">
-                        <div class="crown"></div>
-                        <div class="smileFace"></div>
-                        <img src="./dist/img/tv.svg" alt="Obrazek Telewizora" class="tv">
-                    </div>
-                    <div class="line-up__box">
-                        <div class="line-up__localization-box">
-                            <h2>Lokalizacja: Dargocice k. Goscina</h2>
-                        </div>
-                        <div class="line-up__header">
-                            <h2 class="line-up__title">Line Up</h2>
-                            <div class="line-up__btns">
-                                <button>Sobota</button>
-                                <!-- <button>Sobota</button> -->
-                            </div>
-                        </div>
-                        <div class="line-up__artist-box">
-                            <img src="./dist/img/djPoster.png" alt="">
-                            <img src="./dist/img/djPoster.png" alt="">
-                            <img src="./dist/img/djPoster.png" alt="">
-                            <img src="./dist/img/djPoster.png" alt="">
-                        </div>
-                        <div class="line-up__footer">
-                            <div class="line-up__bbtv">
-                                <a href="https://youtube.com/@bliskobrzegu?si=0DQpfE6U0Pwu6Nk9" target=”_blank”
-                                    rel=”noopener”>Blisko Brzegu TV</a>
-                            </div>
-                            <div class="line-up__yt">
-                                <a href="https://youtube.com/@bliskobrzegu?si=0DQpfE6U0Pwu6Nk9" target=”_blank”
-                                    rel=”noopener”><img src="./dist/img/yt.png"
-                                        alt="Logo You Tube z kanalem BBFest"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="info">
-            <div class="info">
-                <div class="wrapper">
-                    <div class="xSmall"></div>
-                    <div class="xArrows"></div>
-                    <div class="info__container">
-                        <div class="info__box">
-                            <div class="info__smile">
-                                <img src="./dist/img/smile.svg" alt="Usmiechnieta buzka z napisem Smile">
-                            </div>
-                            <div class="info__title">
-                                <h2>TWOJ PRZEWODNIK DO NAJLEPSZEJ ZABAWY</h2>
-                            </div>
-                            <div class="info__faq">
-                                <button>FESTIWALOWY PRZEWODNIK</button>
-                                <button>REGULAMIN</button>
-                                <button>BILETY</button>
-                                <button>FAQ</button>
-                            </div>
-                            <div class="info__kindness">
-                                <img src="./dist/img/kindness.svg" alt="Logo z napisem kindness">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section id="email">
             <div class="email">
                 <div class="wrapper">
-                    <div class="bar-code"></div>
+                    <div class="email__graphics email__graphics--hand"></div>
+                    <div class="email__graphics email__graphics--bar-code"></div>
+                    <div class="email__graphics email__graphics--eye"></div>
                     <div class="email__container">
                         <div class="email__box">
-                            <div class="email__logo">
-                                <img src="./dist/img/emailBBLogo.svg" alt="Logo Festiwalu Blisko Brzegu">
-                            </div>
+                            <!-- <div class="email__poster">
+                                <img src="./dist/img/posterEmail.svg" alt="Logo Festiwalu Blisko Brzegu">
+                            </div> -->
+
                             <div class="email__title">
-                                <h2>Zapisz <img src="./dist/img/heart.svg" alt="Zdjecia rozowo fioletowego serca"> Maila
+                                <h2>Zapisz Maila
                                 </h2>
                             </div>
                             <div class="email__form">
@@ -181,47 +104,14 @@
 
                                     </div>
                                 </form>
-                                <button>Zapisz Mail</button>
+                                <button></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="socials">
-            <div class="socials">
-                <div class="wrapper">
-                    <div class="socials-graphs">
-                        <div class="pattern pattern--green"></div>
-                        <div class="pattern pattern--purple"></div>
-                        <div class="pattern pattern--pink"></div>
-                        <div class="paper-sheet">
-                            <div></div>
-                        </div>
-                        <div class="hand"></div>
-                        <img class="phone" src="./dist/img/phone.svg"
-                            alt="Zdjecie telefonu z otwartym kanalem Instagram Blisko Brzegu">
-                    </div>
-                    <div class="socials__container">
-                        <div class="socials__box">
-                            <h2>Jestesmy blisko</h2>
-                            <div class="socials__icons">
-                                <h3>Na socialach</h3>
-                                <div class="socials__icons-list">
-                                    <a href="https://www.instagram.com/bliskobrzegu/" target=”_blank” rel=”noopener
-                                       ”><img src="./dist/img/ig.svg" alt="Ikona Instagrama BB Fest"></a>
-                                    <a href="https://youtube.com/@bliskobrzegu?si=0DQpfE6U0Pwu6Nk9" target=”_blank”
-                                        rel=”noopener”><img src="./dist/img/yt.svg"
-                                            alt="Ikona YouTube Blisko Brzegu Fest"></a>
-                                    <a href="https://www.tiktok.com/@bliskobrzegu" target=”_blank” rel=”noopener
-                                       ”><img src="./dist/img/tt.svg" alt="Ikona TikTok BB Fest"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
     </main>
     <footer>
         <div class="footer">
@@ -229,13 +119,13 @@
                 <div class="footer__container">
                     <a href="https://dotcreaction.com/" rel=”noopener”>Partner Technologiczny [DOT]</a>
                     <div class="footer__logos">
-                        <a rel=”noopener”><img src="./dist/img/twelveLogo.png" alt="Logo twelve tons"></a>
-                        <a href="https://eagproduction.com/" rel=”noopener”><img src="./dist/img/eagLogo.png"
+                        <a rel=”noopener”><img src="./dist/img/twelveLogo.svg" alt="Logo twelve tons"></a>
+                        <a href="https://eagproduction.com/" rel=”noopener”><img src="./dist/img/eagLogo.svg"
                                 alt="Logo agencji EAG"></a>
-                        <a href="https://goscino.pl/" rel=”noopener”><img src="./dist/img/goscinoLogo.png"
+                        <a href="https://goscino.pl/" rel=”noopener”><img src="./dist/img/goscinoLogo.svg"
                                 alt="Logo gminy Goscino"></a>
                         <a href="https://goscino.pl/centrum-kultury-i-ksiazki.html" rel=”noopener”><img
-                                src="./dist/img/ckkLogo.png" alt="Logo centrum kultury i ksiazki"></a>
+                                src="./dist/img/ckkLogo.svg" alt="Logo centrum kultury i ksiazki"></a>
                     </div>
                     <a href="#home">Blisko Brzegu <span class="footer__foot-year"></span></a>
                 </div>

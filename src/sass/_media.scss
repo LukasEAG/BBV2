@@ -36,54 +36,6 @@
 			}
 		}
 	}
-	@media screen and (max-width: 769px) {
-		.media {
-			&__box-top,
-			&__box-bottom {
-				flex-direction: column;
-				aspect-ratio: 2 / 3;
-				height: 100%;
-			}
-			&__box-left,
-			&__box-right,
-			&__box-social-left {
-				padding: 2rem;
-				width: 100%;
-				height: 100%;
-			}
-		}
-	}
-	@media screen and (max-width: 600px) {
-		.localization {
-			&__box {
-				h2 {
-					padding: 1rem 2.2rem;
-					font-size: 1.2rem;
-					text-align: center;
-					line-height: 1.8;
-				}
-			}
-		}
-		.line-up {
-			&__box {
-				padding: 2rem;
-			}
-
-			&__btns {
-				& button {
-					padding: 1.2rem 2rem;
-				}
-			}
-
-			&__artist-box {
-				& span {
-					font-size: 1.2rem;
-					text-align: center;
-					line-height: 2;
-				}
-			}
-		}
-	}
 	@media screen and (max-width: 565px) {
 		nav {
 			height: 60px;
@@ -97,21 +49,6 @@
 			&__others-link {
 				padding: 1rem 1.2rem;
 				font-size: 1.1rem;
-			}
-		}
-		.tickets {
-			padding: 2rem 0 4rem;
-			height: auto;
-
-			&__container h2 {
-				font-size: 2.3rem;
-			}
-			&__box {
-				flex-direction: column;
-				gap: 4rem;
-			}
-			&__ticket img {
-				max-width: 280px;
 			}
 		}
 	}
