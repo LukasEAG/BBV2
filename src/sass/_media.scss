@@ -1,8 +1,25 @@
 @mixin queries {
+	@media screen and (max-width: 1200px) {
+		.footer {
+			&__container {
+				display: grid;
+				justify-items: center;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+			}
+
+			&__logos {
+				grid-row: 1;
+				grid-column: span 2;
+			}
+		}
+	}
 	@media screen and (max-width: 992px) {
 		.nav-menu {
 			justify-content: flex-end;
-
+			&__container {
+				justify-content: space-between;
+			}
 			&__mobile {
 				display: flex;
 				justify-content: center;
@@ -20,7 +37,7 @@
 			&__logo,
 			&__mobile,
 			&__others {
-				width: 30%;
+				width: 100%;
 			}
 
 			&__links {
@@ -36,19 +53,84 @@
 			}
 		}
 	}
+	@media screen and (max-width: 768px) {
+		.contact {
+			&__box {
+				padding: 0 2rem;
+				& img {
+					padding-bottom: 5rem;
+					max-width: 200px;
+				}
+			}
+			&__title-text {
+				& p {
+					font-size: 1.2rem;
+				}
+			}
+			&__adress-list {
+				& span {
+					padding: 1rem 0;
+					font-size: 1.4rem;
+					text-align: center;
+					& a {
+						padding: 0.5rem 0;
+						display: block;
+					}
+				}
+			}
+		}
+	}
 	@media screen and (max-width: 565px) {
 		nav {
 			height: 60px;
 		}
 		.nav-menu {
+			&__container {
+				padding: 1rem 0;
+			}
+			&__logo,
+			&__mobile,
+			&__others {
+				justify-content: center;
+			}
 			&__mobile {
 				& button {
 					width: 30px;
 				}
 			}
+			&__logo img {
+				max-height: 45px;
+				width: auto;
+			}
 			&__others-link {
 				padding: 1rem 1.2rem;
 				font-size: 1.1rem;
+			}
+		}
+
+		.footer {
+			&__container {
+				padding: 3rem 3rem .5rem;
+				grid-template-columns: 1fr;
+				grid-template-rows: repeat(3, auto);
+			}
+			&__dot, &__bb {
+				padding: 2rem 0 1rem;
+				text-align: center;
+			}
+			&__dot {
+				grid-row: 2;
+			}
+			&__bb {
+				grid-row: 3;
+			}
+			&__logos {
+				gap: 2rem 3rem;
+				flex-wrap: wrap;
+
+				& a {
+					width: 40%;
+				}
 			}
 		}
 	}

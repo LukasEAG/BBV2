@@ -13,18 +13,23 @@
 html {
 	font-size: 62.5%;
 	font-family: 'Retro-Computer', sans-serif;
+	height: 100%;
 }
-
 body {
 	position: relative;
 	background: var(--bb-nav);
+	height: 100%;
 }
-
 nav {
 	position: fixed;
 	width: 100%;
 	height: 100px;
 	z-index: 10;
+}
+header,
+main,
+footer {
+	overflow: hidden;
 }
 button {
 	cursor: pointer;
@@ -47,17 +52,16 @@ li {
 .nav-wrapper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1550px;
+	max-width: 1430px;
 	height: 100%;
 }
 
-section,
-header {
+section {
+	position: relative;
 	height: 100vh;
 	background: url(../img/backgroundBB.webp);
 	background-size: cover;
 	background-position: center;
-	z-index: 0;
 }
 .nav-menu {
 	height: 100%;
@@ -90,7 +94,7 @@ header {
 		& img {
 			max-width: 125px;
 			width: 100%;
-			height: 100%;
+			height: auto;
 		}
 	}
 
@@ -116,10 +120,10 @@ header {
 		}
 	}
 
-	&__link, &__others-link {
+	&__link,
+	&__others-link {
 		padding: 1.6rem 2rem;
 		border-radius: 1.3rem;
-
 	}
 	&__others {
 		display: flex;
@@ -141,32 +145,69 @@ header {
 	}
 }
 
-header {
+.header {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: flex-end;
 	align-items: center;
-	max-height: 100vh;
+	height: 100%;
+	background: url(../img/backgroundBB.webp);
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
 
 	.video__box {
+		margin: 12rem 0 0;
 		padding: 0 5rem;
-		max-height: 720px;
-		max-width: 1550px;
+		max-height: 880px;
+		max-width: 1430px;
 
 		& video {
-			width: 100%;
-			height: 100%;
 			object-fit: cover;
-			overflow-clip-margin: content-box;
 			overflow: clip;
 			border-radius: 3rem;
+		}
+	}
+
+	&__socials {
+		padding: 3rem 5rem;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 5rem;
+		max-width: 1430px;
+		width: 100%;
+
+		& h1 {
+			padding: 0.5rem 2.6rem;
+			font-size: 2.4rem;
+			background-color: var(--bb-grey);
+			color: var(--bb-pink);
+			border-radius: 1.3rem;
+		}
+	}
+
+	&__socials-list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5rem;
+
+		& a {
+			font-size: 2.4rem;
+			color: var(--bb-black);
+			transition: color 0.4s;
+			cursor: pointer;
+
+			&:hover {
+				color: var(--bb-white);
+			}
 		}
 	}
 }
 
 .email {
-	position: relative;
 	height: 100%;
-	z-index: 0;
 	background: url(../../dist/img/emailBg.png);
 	background-size: cover;
 	background-position: center;
@@ -339,6 +380,78 @@ header {
 		}
 	}
 }
+.contact {
+	padding: 4rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	// opacity: 0;
+	// pointer-events: none;
+	z-index: 0;
+
+	p,
+	span {
+		font-family: 'VHSGothic', sans-serif;
+	}
+
+	&__box {
+		margin: 0 auto;
+		padding: 4rem 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 890px;
+		height: 100%;
+		color: #281717;
+		border-radius: 0.8rem;
+
+		& img {
+			padding-bottom: 10rem;
+		}
+	}
+
+	&__title-text {
+		margin: 0 auto;
+		max-width: 680px;
+		& p {
+			text-align: center;
+			font-size: 2rem;
+		}
+	}
+
+	&__adress-list {
+		padding: 4rem 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-content: center;
+
+		& span {
+			padding: 2rem 0;
+			font-size: 2rem;
+			color: var(--bb-grey);
+			text-transform: uppercase;
+
+			& a {
+				text-transform: lowercase;
+				transition: color 0.4s;
+
+				&:hover {
+					color: var(--bb-white);
+				}
+			}
+		}
+	}
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+}
 
 .footer {
 	background: var(--bb-white);
@@ -346,18 +459,19 @@ header {
 	height: 100%;
 
 	&__container {
-		padding: 8rem 0;
+		padding: 8rem 1rem;
 		display: flex;
 		align-items: center;
-		justify-content: space-evenly;
+		justify-content: space-around;
 
 		a {
-			width: 15%;
 			font-size: 1.2rem;
 		}
 	}
 
 	&__logos {
+		margin: 0 1rem;
+		padding: 2rem;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
@@ -369,9 +483,11 @@ header {
 		& img {
 			width: 100%;
 			height: auto;
-			max-width: 105px;
+			max-height: 45px;
 		}
 	}
 }
+
+
 
 @include media.queries;
