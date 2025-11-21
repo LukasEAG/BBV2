@@ -152,7 +152,6 @@ section {
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
-	height: 100%;
 	background: url(../img/backgroundBB.webp);
 	background-size: cover;
 	background-position: center;
@@ -166,8 +165,8 @@ section {
 
 		& video {
 			object-fit: cover;
-			overflow: clip;
 			border-radius: 3rem;
+			aspect-ratio: 16 / 9;
 		}
 	}
 
