@@ -54,12 +54,44 @@
 		}
 	}
 	@media screen and (max-width: 768px) {
+		.email {
+			&__graphics {
+				&--eye {
+					display: none;
+				}
+				&--bar-code {
+					background-size: 120px;
+				}
+			}
+			&__title {
+				padding: 6rem 0 0;
+				& h2 {
+					font-size: 2.4rem;
+				}
+			}
+			&__form {
+				justify-content: center;
+				& h3 {
+					font-size: 1.2rem;
+				}
+				& form {
+					grid-template-rows: repeat(3, auto);
+					& input[type='text'] {
+						height: 40px;
+
+						&::placeholder {
+							font-size: 1.2rem;
+						}
+					}
+				}
+			}
+		}
 		.contact {
 			&__box {
-				padding: 0 2rem;
+				padding: 4rem 2rem;
 				& img {
 					padding-bottom: 5rem;
-					max-width: 200px;
+					max-width: 150px;
 				}
 			}
 			&__title-text {
@@ -110,11 +142,12 @@
 
 		.footer {
 			&__container {
-				padding: 3rem 3rem .5rem;
+				padding: 3rem 3rem 0.5rem;
 				grid-template-columns: 1fr;
 				grid-template-rows: repeat(3, auto);
 			}
-			&__dot, &__bb {
+			&__dot,
+			&__bb {
 				padding: 2rem 0 1rem;
 				text-align: center;
 			}

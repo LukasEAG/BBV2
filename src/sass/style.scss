@@ -58,7 +58,9 @@ li {
 
 section {
 	position: relative;
-	height: 100vh;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
 	background: url(../img/backgroundBB.webp);
 	background-size: cover;
 	background-position: center;
@@ -207,7 +209,7 @@ section {
 }
 
 .email {
-	height: 100%;
+	width: 100%;
 	background: url(../../dist/img/emailBg.png);
 	background-size: cover;
 	background-position: center;
@@ -219,7 +221,7 @@ section {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		z-index: -1;
+		z-index: 1;
 
 		&--bar-code {
 			background: url(../../dist/img/barCode.svg);
@@ -235,29 +237,14 @@ section {
 			background-position: right 100px bottom 120px;
 			background-repeat: no-repeat;
 		}
-		// &--hand {
-		// 	background: url(../../dist/img/handEmail.svg);
-		// 	background-size: 45%;
-		// 	background-position: left 25% top 40%;
-		// 	background-repeat: no-repeat;
-		// 	z-index: 2;
-		// }
-	}
-
-	&__container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
 	}
 
 	&__box {
-		padding: 10rem 0 0;
+		margin: 2rem auto 0;
+		padding: 4rem 0;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		justify-content: center;		
 		max-width: 640px;
 		height: 100%;
 	}
@@ -273,7 +260,7 @@ section {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 20%;
+		height: 15%;
 		width: 100%;
 		z-index: 10;
 
@@ -296,13 +283,14 @@ section {
 		padding: 0 3rem;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-start;
+		justify-content: center;
 		align-items: center;
-		gap: 2rem;
-		height: 50%;
+		height: 100%;
+		max-height: 340px;
 		z-index: 10;
 
 		& h3 {
+			padding: 1rem 0;
 			font-size: 1.4rem;
 			color: var(--bb-white);
 		}
@@ -333,10 +321,9 @@ section {
 			background: url(../../dist/img/btnSendBB.svg);
 			background-size: cover;
 			border: none;
-			max-width: 150px;
-			max-height: 71px;
-			height: 100%;
-			width: 100%;
+
+			height: 70px;
+			width: 150px;
 			transform: scale(1);
 			transition: transform 0.4s;
 
@@ -370,8 +357,10 @@ section {
 			display: inline-block;
 			background-color: white;
 			box-sizing: border-box;
-			width: 40px;
-			height: 25px;
+			width: 100%;
+			height: 100%;
+			max-width: 20px;
+			max-height: 20px;
 			border-radius: 0.2rem;
 
 			&:has(> input:checked) {
@@ -381,15 +370,8 @@ section {
 	}
 }
 .contact {
-	padding: 4rem 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+
 	width: 100%;
-	height: 100%;
-	// opacity: 0;
-	// pointer-events: none;
 	z-index: 0;
 
 	p,
@@ -487,7 +469,5 @@ section {
 		}
 	}
 }
-
-
 
 @include media.queries;
