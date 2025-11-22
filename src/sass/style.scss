@@ -167,6 +167,7 @@ section {
 			object-fit: cover;
 			border-radius: 3rem;
 			aspect-ratio: 16 / 9;
+			box-shadow: 0px 0px 10px 2px #a8a8a8;
 		}
 	}
 
@@ -341,7 +342,7 @@ section {
 
 		& label {
 			font-size: 0.9rem;
-			color: var(--bb-white);
+			color: var(--bb-black);
 		}
 
 		& input[type='checkbox'] {

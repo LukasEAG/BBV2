@@ -36,6 +36,7 @@
 		.nav-menu {
 			justify-content: flex-end;
 			&__container {
+				padding: 0 2rem;
 				justify-content: space-between;
 			}
 			&__mobile {
@@ -70,8 +71,20 @@
 				background: white;
 			}
 		}
+			.footer {
+			&__container {
+				padding: 4rem 2rem 0;
+			}
+		}
 	}
 	@media screen and (max-width: 768px) {
+		.header {
+			&__socials {
+				padding: 3rem 2rem;
+				flex-direction: column;
+				gap: 3rem;
+			}
+		}
 		.email {
 			&__graphics {
 				&--eye {
@@ -129,6 +142,7 @@
 				}
 			}
 		}
+	
 	}
 	@media screen and (max-width: 565px) {
 		nav {
@@ -136,7 +150,8 @@
 		}
 		.nav-menu {
 			&__container {
-				padding: 1rem 0;
+				margin: 1rem 0 0;
+				padding: 0;
 			}
 			&__logo,
 			&__mobile,
@@ -157,10 +172,17 @@
 				font-size: 1.1rem;
 			}
 		}
+		.header {
+			&__socials-list {
+				& a {
+					font-size: 1.4rem;
+				}
+			}
+		}
 
 		.footer {
 			&__container {
-				padding: 3rem 3rem 0.5rem;
+				padding: 3rem 2rem;
 				grid-template-columns: 1fr;
 				grid-template-rows: repeat(3, auto);
 			}
@@ -185,15 +207,31 @@
 			}
 		}
 	}
-
-	@media  (orientation: portrait) {
+	@media screen and (max-width: 360px) {
+		.header {
+			&__socials {
+				padding: 3rem 1rem;
+				& a {
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+	@media (orientation: portrait) {
 		.header {
 			.video__box {
-				margin: 8rem 0 0;
+				margin: 12rem 0 0;
 				max-height: unset;
 				& video {
 					aspect-ratio: 3 / 4;
 				}
+			}
+		}
+	}
+	@media screen and (max-width: 565px) and (orientation: portrait) {
+		.header {
+			.video__box {
+				margin: 8rem 0 0;
 			}
 		}
 	}
