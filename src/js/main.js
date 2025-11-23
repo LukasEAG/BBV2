@@ -1,11 +1,8 @@
 const navBar = document.querySelector('.nav-menu')
 window.addEventListener('scroll', () => {
-	if (window.scrollY > 10) {
-		navBar.classList.add('background')
-	} else if (window.scrollY <= 10) {
-		navBar.classList.remove('background')
-	}
+	navBarBgHandler()
 })
+
 
 const body = document.querySelector('body')
 const mobileNav = document.querySelector('.nav-menu__links')
@@ -14,6 +11,15 @@ const mobileMenuBtns = document.querySelectorAll('.nav-menu__link')
 const contactDiv = document.querySelector('#contact')
 const contactBtn = document.querySelector('.contactBtn')
 const closeContact = document.querySelector('.close-contact')
+
+const navBarBgHandler = () => {
+	if (window.scrollY > 10 ) {
+		console.log('dziala');
+		navBar.classList.add('background')
+	} else if (window.scrollY <= 10) {
+		navBar.classList.remove('background')
+	}
+}
 
 
 const navHendler = () => {
@@ -33,10 +39,10 @@ btnOpenNav.addEventListener('click', e => {
 	navHendler()
 	stopScrolling()
 })
-mobileMenuBtns.forEach( btn => {
-	btn.addEventListener('click', () => {
-		navHendler()
+mobileMenuBtns.forEach(btn => {
+	btn.addEventListener('click', e => {
 		stopScrolling()
+		navHendler()
 	})
 })
 contactBtn.addEventListener('click', e => {
@@ -50,7 +56,6 @@ closeContact.addEventListener('click', e => {
 	contacHendler()
 	stopScrolling()
 })
-
 
 const footerYear = document.querySelector('.footer__foot-year')
 const handleCurrentYear = () => {
