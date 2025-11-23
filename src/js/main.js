@@ -1,3 +1,12 @@
+const navBar = document.querySelector('.nav-menu')
+window.addEventListener('scroll', () => {
+	if (window.scrollY > 10) {
+		navBar.classList.add('background')
+	} else if (window.scrollY <= 10) {
+		navBar.classList.remove('background')
+	}
+})
+
 const body = document.querySelector('body')
 const mobileNav = document.querySelector('.nav-menu__links')
 const btnOpenNav = document.querySelector('.nav-menu__mobile-open-btn')
@@ -22,10 +31,12 @@ const stopScrolling = () => {
 btnOpenNav.addEventListener('click', e => {
 	e.preventDefault()
 	navHendler()
+	stopScrolling()
 })
 mobileMenuBtns.forEach( btn => {
 	btn.addEventListener('click', () => {
 		navHendler()
+		stopScrolling()
 	})
 })
 contactBtn.addEventListener('click', e => {

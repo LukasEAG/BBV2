@@ -75,6 +75,10 @@ section {
 .nav-menu {
 	height: 100%;
 	width: 100%;
+
+	&.background {
+		background: #454845eb;
+	}
 	&__container {
 		padding: 0 5rem;
 		display: flex;
