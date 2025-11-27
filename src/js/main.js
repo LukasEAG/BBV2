@@ -36,7 +36,7 @@ menuBtns.forEach(btn => {
 	btn.addEventListener('click', e => {
 		const btnLink = btn.querySelector('a')
 		const href = btnLink ? btnLink.getAttribute('href') : null
-		const isMobile = window.innerWidth <= 768
+		const isMobile = window.innerWidth <= 992
 
 		if (href === '#contact') {
 			isContactOpen() ? closeContactHandler() : openContactHandler()
