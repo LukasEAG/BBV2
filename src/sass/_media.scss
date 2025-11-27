@@ -72,12 +72,15 @@
 				height: 100%;
 				background: white;
 				overflow-y: scroll;
-				transition: transform .4s;
+				transition: transform 0.4s;
 
 				&.active {
 					transform: translateX(100%);
 				}
 			}
+		}
+		.contact {
+			top: 120px;
 		}
 		.footer {
 			&__container {
@@ -157,7 +160,7 @@
 		}
 		.nav-menu {
 			&__container {
-				padding: .2rem 0 0;
+				padding: 0.2rem 0 0;
 			}
 			&__logo,
 			&__mobile,
@@ -192,6 +195,7 @@
 			}
 		}
 		.contact {
+			top: 100px;
 			.close-contact {
 				padding: 0.7rem;
 				width: 35px;

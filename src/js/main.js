@@ -3,59 +3,59 @@ window.addEventListener('scroll', () => {
 	navBarBgHandler()
 })
 
-
 const body = document.querySelector('body')
 const mobileNav = document.querySelector('.nav-menu__links')
 const btnOpenNav = document.querySelector('.nav-menu__mobile-open-btn')
-const mobileMenuBtns = document.querySelectorAll('.nav-menu__link')
+const menuBtns = Array.from(document.querySelectorAll('.nav-menu__link')).filter(el => el.classList.length === 1)
 const contactDiv = document.querySelector('#contact')
-const contactBtn = document.querySelector('.contactBtn')
-const closeContact = document.querySelector('.close-contact')
+const btnCloseContact = document.querySelector('.close-contact')
 
 const navBarBgHandler = () => {
-	if (window.scrollY > 10 ) {
-		console.log('dziala');
+	if (window.scrollY > 10) {
 		navBar.classList.add('background')
 	} else if (window.scrollY <= 10) {
 		navBar.classList.remove('background')
 	}
 }
-
-
-const navHendler = () => {
-	mobileNav.classList.contains('active') ? mobileNav.classList.remove('active') : mobileNav.classList.add('active')
-}
-const contacHendler = () => {
-	contactDiv.classList.contains('active') ? contactDiv.classList.remove('active') : contactDiv.classList.add('active')
-}
-const stopScrolling = () => {
-	body.classList.contains('stop-scrolling')
-		? body.classList.remove('stop-scrolling')
-		: body.classList.add('stop-scrolling')
+const navHandler = () => {
+	mobileNav.classList.toggle('active')
 }
 
-btnOpenNav.addEventListener('click', e => {
-	e.preventDefault()
-	navHendler()
-	stopScrolling()
-})
-mobileMenuBtns.forEach(btn => {
+const openContactHandler = () => {
+	contactDiv.classList.add('active')
+	body.classList.add('stop-scrolling')
+}
+
+const closeContactHandler = () => {
+	contactDiv.classList.remove('active')
+	body.classList.remove('stop-scrolling')
+}
+const isContactOpen = () => contactDiv.classList.contains('active')
+
+menuBtns.forEach(btn => {
 	btn.addEventListener('click', e => {
-		stopScrolling()
-		navHendler()
+		const btnLink = btn.querySelector('a')
+		const href = btnLink ? btnLink.getAttribute('href') : null
+		const isMobile = window.innerWidth <= 768
+
+		if (href === '#contact') {
+			isContactOpen() ? closeContactHandler() : openContactHandler()
+			if (isMobile) navHandler()
+		} else {
+			if (isContactOpen()) {
+				closeContactHandler()
+			}
+			if (isMobile) navHandler()
+		}
 	})
 })
-contactBtn.addEventListener('click', e => {
-	e.preventDefault()
-	contacHendler()
-	stopScrolling()
+btnOpenNav.addEventListener('click', () => {
+	navHandler()
+})
+btnCloseContact.addEventListener('click', () => {
+	closeContactHandler()
 })
 
-closeContact.addEventListener('click', e => {
-	e.preventDefault()
-	contacHendler()
-	stopScrolling()
-})
 
 const footerYear = document.querySelector('.footer__foot-year')
 const handleCurrentYear = () => {
