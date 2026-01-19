@@ -67,7 +67,7 @@
 				flex-direction: column;
 				justify-content: start;
 				gap: 5rem;
-				width: 100vw;
+				width: 100%;
 				min-height: 100vh;
 				height: 100%;
 				background: white;
@@ -191,6 +191,15 @@
 			&__socials-list {
 				& a {
 					font-size: 1.4rem;
+				}
+			}
+		}
+		.email {
+			&__box {
+				& form {
+					& input[type='text'] {
+						height: 30px;
+					}
 				}
 			}
 		}

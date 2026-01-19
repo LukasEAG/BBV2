@@ -38,11 +38,11 @@
                     <li class="nav-menu__others-link"><a href="" target=”_blank” rel=”noopener”>BB 2025</a></li>
                 </div>
                 <ul class="nav-menu__links">
-                    <li class="nav-menu__link"><a href="#email">News</a></li>
+                    <li class="nav-menu__link"><a href="/#email">News</a></li>
                     <li class="nav-menu__link not-active"><a href="#line-up">Artysci</a></li>
                     <li class="nav-menu__link not-active"><a href="#info">Info</a></li>
                     <li class="nav-menu__link not-active"><a href="#tickets">Bilety</a></li>
-                    <li class="nav-menu__link"><a href="#contact" class="contactBtn">Kontakt</a></li>
+                    <li class="nav-menu__link"><a href="/#contact" class="contactBtn">Kontakt</a></li>
                 </ul>
                 <div class="nav-menu__mobile">
                     <button class="nav-menu__mobile-open-btn"> <svg xmlns="http://www.w3.org/2000/svg"
@@ -64,74 +64,40 @@
 </nav>
 
 <body>
-    <header id="home">
-        <div class="header">
-
-
-            <div class="video__box">
-                <video width="100%" height="100%" autoplay="" loop="" muted="" playsinline="" preload="metadata"
-                    poster="./dist/img/bbHero.png">
-                    <source src="./dist/img/bbMovie.mp4">
-                </video>
-            </div>
-            <div class="header__socials">
-                <h1 class="header__title">Jestesmy Blisko</h1>
-                <div class="header__socials-list">
-                    <a href="https://www.instagram.com/bliskobrzegu?igsh=MTRnMTllM3l2bXZtcw==" target="_blank"
-                        rel="noopener noreferrer">Instagram .</a>
-                    <a href="https://www.tiktok.com/@bliskobrzegu" target="_blank" rel="noopener noreferrer">TikTok
-                        .</a>
-                    <a href="https://youtube.com/@bliskobrzegu?si=aI9c39qxahACq7ZT" target="_blank"
-                        rel="noopener noreferrer">YouTube</a>
-                </div>
-            </div>
-        </div>
-    </header>
     <main>
-        <section id="email">
-            <div class="email">
-                <div class="email__graphics email__graphics--bar-code"></div>
-                <div class="email__graphics email__graphics--eye"></div>
+        <section id="newsletter-delete">
+            <div class="newsletter-delete">
+                <div class="newsletter-delete__graphics newsletter-delete__graphics--bar-code"></div>
+                <div class="newsletter-delete__graphics newsletter-delete__graphics--eye"></div>
                 <div class="wrapper">
-                    <div class="email__graphics email__graphics--hand"></div>
-                    <div class="email__box">
-                        <div class="email__title">
-                            <h2>Zapisz Maila
+                    <div class="newsletter-delete__graphics newsletter-delete__graphics--hand"></div>
+                    <div class="newsletter-delete__box">
+                        <div class="newsletter-delete__title">
+                            <h2>Zrezygnuj z Newslettera
                             </h2>
                         </div>
-                        <div class="email__form-box">
-                            <h3>Badz zawsze pierwszy</h3>
-                            <form registration-form="subscribe" class="email__form">
+                        <div class="newsletter-delete__form-box">
+                            <form registration-form="unsubscribe" class="newsletter-delete__form">
                                 <div form-popup class="form-popup">
                                     <div form-popup-container class="form-popup__container">
                                         <button close-popup-btn class="form-popup__container--closeBtn">Zamknij</button>
                                     </div>
                                 </div>
-                                <div class="email__form-row">
-                                    <label for="userName">Imię</label>
-                                    <input type="text" name="userName" id="userName" placeholder="min 3, max 13 znaków">
-                                </div>
-
-                                <div class="email__form-row">
-                                    <label for="userEmail">E-mail</label>
-                                    <input type="text" name="userEmail" id="userEmail"
+                                <div class="newsletter-delete__form-row">
+                                    <label for="userEmailUs">E-mail</label>
+                                    <input type="text" name="userEmailUs" id="userEmailUs"
                                         placeholder="(np. imie@domena.pl)">
                                 </div>
-                                <div class="email__agree-box">
-                                    <span class="input-checkbox"> <input name="checkbox" type="checkbox"
-                                            id="agree"></span>
-                                    <label for="agree">
-                                        Wyrażam zgodę na otrzymywanie od EAG właściciela marki BLISKO BRZEGU
-                                        informacji
-                                        o aktualnościach, nowościach i promocjach na podany adres e-mail zgodnie z <a href="http://localhost:3000/privacyPolicy.html">polityka prywatnosci</a>. </label>
+                                <div class="newsletter-delete__agree-box">
+                                    <span class="input-checkbox"> <input name="checkboxUs" type="checkbox"
+                                            id="unsubscribe"></span>
+                                    <label for="unsubscribe">
+                                      Jestem pewiene ze chce usunac swojego mail z newslettera </label>
 
                                 </div>
-                                <div class="email__unsubscribe">
-                                    <a href="http://localhost:3000/NewsletterDelete.html">Wypisz sie z newslettera</a>
-                                </div>
-                                <div class="email__send-box">
+                                <div class="newsletter-delete__send-box">
 
-                                    <button class="email__submit" type="submit">
+                                    <button class="newsletter-delete__submit" type="submit">
                                     </button>
                                     <p class="sendingProceed">Wysylanie</p>
                                 </div>
@@ -144,28 +110,6 @@
                     </div>
                 </div>
             </div>
-            </div>
-        </section>
-        <section id="contact">
-            <div class="contact">
-                <button class="close-contact"><img src="./dist/img/x.png" alt=""></button>
-                <div class="wrapper">
-                    <div class="contact__box">
-                        <img src="./dist/img/BBLogo.svg" alt="">
-                        <div class="contact__title-text">
-                            <p>Chcesz podjąć współpracę z BliskoBrzegu, szukasz unikalnej formy promocji swoich
-                                produktów, marki lub jesteś artystą? </p>
-                        </div>
-                        <div class="contact__adress-list">
-                            <span>Media i Sponsorzy: <a
-                                    href="mailto:media@bliskobrzegu.pl">media[@]bliskobrzegu.pl</a></span>
-                            <span>WSPÓŁPRACA: <a href="mailto:team@bliskobrzegu.pl">team[@]bliskobrzegu.pl</a></span>
-                            <span>AKREDYTACJE: <a
-                                    href="mailto:akredytacje[@]bliskobrzegu.pl">akredytacje@bliskobrzegu.pl</a></span>
-                            <span>BILETY: <a href="mailto:ticket@bliskobrzegu.pl">ticket[@]bliskobrzegu.pl</a></span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
