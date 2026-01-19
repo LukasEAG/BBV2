@@ -58,6 +58,11 @@ btnCloseContact.forEach(btn => {
 		closeContactHandler()
 	})
 })
+document.addEventListener('DOMContentLoaded', () => {
+	if (window.location.hash === '#contact') {
+		openContactHandler()
+	}
+})
 
 const regFormPopup = document.querySelector('[form-popup]')
 const regFormPopupContainer = document.querySelector('[form-popup-container]')
