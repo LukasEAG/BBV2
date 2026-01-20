@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'Dogica';
-	src: local('Dogica'), local('Dogica-Regular'), url('../../fonts/Dogica/dogica-regular.woff2') format('woff2'),
-		url('../../fonts/Dogica/dogica-regular.woff') format('woff'),
-		url('../../fonts/Dogica/dogica-regular.otf') format('opentype');
+	src: local('Dogica'), local('Dogica-Regular'), url('../../fonts/Dogica/dogica.woff2') format('woff2'),
+		url('../../fonts/Dogica/dogica.woff') format('woff'),
+		url('../../fonts/Dogica/dogica.otf') format('opentype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -11,9 +11,9 @@
 
 @font-face {
 	font-family: 'Dogica';
-	src: local('Dogica Bold'), local('Dogica-Bold'), url('../../fonts/Dogica/dogica-bold.woff2') format('woff2'),
-		url('../../fonts/Dogica/dogica-bold.woff') format('woff'),
-		url('../../fonts/Dogica/dogica-bold.otf') format('opentype');
+	src: local('Dogica Bold'), local('Dogica-Bold'), url('../../fonts/Dogica/dogicabold.woff2') format('woff2'),
+		url('../../fonts/Dogica/dogicabold.woff') format('woff'),
+		url('../../fonts/Dogica/dogicabold.otf') format('opentype');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
