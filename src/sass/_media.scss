@@ -214,12 +214,14 @@
 				& form {
 					& input[type='text'] {
 						margin: 0.4rem 0;
+						padding: .5rem;
 						height: 30px;
 					}
 
 					& input,
 					input::placeholder {
-						font-size: 1rem;
+						padding: .5rem;
+						font-size: 1.8rem;
 					}
 				}
 			}
