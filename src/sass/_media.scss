@@ -70,7 +70,7 @@
 				width: 100%;
 				min-height: 100vh;
 				height: 100%;
-				background: white;
+				background: url(../img/backgroundBB.webp);
 				overflow-y: scroll;
 				transition: transform 0.4s;
 
@@ -256,9 +256,7 @@
 			}
 			ul,
 			ul li {
-			
 				font-size: 1.6rem;
-		
 			}
 		}
 		.footer {

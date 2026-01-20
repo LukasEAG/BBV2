@@ -19,17 +19,31 @@ const navBarBgHandler = () => {
 	}
 }
 const navHandler = () => {
-	mobileNav.classList.toggle('active')
+	if (window.scrollY > 10) {
+		mobileNav.classList.toggle('active')
+		body.classList.toggle('menuActive')
+	} else {
+		mobileNav.classList.toggle('active')
+		body.classList.toggle('menuActive')
+		navBar.classList.toggle('background')
+	}
 }
 
 const openContactHandler = () => {
-	contactDiv.classList.add('active')
-	body.classList.add('stop-scrolling')
+	if (window.scrollY > 10) {
+		contactDiv.classList.add('active')
+		body.classList.add('menuActive')
+	} else {
+		contactDiv.classList.add('active')
+		body.classList.add('menuActive')
+		navBar.classList.toggle('background')
+	}
 }
 
 const closeContactHandler = () => {
 	contactDiv.classList.remove('active')
-	body.classList.remove('stop-scrolling')
+	body.classList.remove('menuActive')
+
 }
 const isContactOpen = () => contactDiv.classList.contains('active')
 
