@@ -179,7 +179,7 @@ const unsubscribeNewsLetter = async e => {
 
 		if (res.ok) {
 			createSpanHendler(`
-Zostales usuniety z naszego newslettera`)
+Zostałeś usunięty z naszego newslettera`)
 
 			lastErrors = {}
 		} else {

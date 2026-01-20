@@ -12,9 +12,12 @@
 
 html {
 	font-size: 62.5%;
-	font-family: 'Retro-Computer', sans-serif;
+	font-family: var(--font-first);
 	height: 100%;
 	scroll-behavior: smooth;
+	-webkit-font-smoothing: none;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeSpeed;
 }
 body {
 	position: relative;
@@ -122,7 +125,7 @@ section {
 		width: 70%;
 		height: 100%;
 		text-transform: uppercase;
-		font-size: 1rem;
+		font-size: 1.4rem;
 		color: var(--bb-white);
 	}
 
@@ -152,7 +155,7 @@ section {
 	&__others-link {
 		background: var(--bb-grey);
 		color: var(--bb-pink);
-		font-size: 1.2rem;
+		font-size: 2rem;
 		font-weight: 600;
 		transition: background 0.4s;
 
@@ -198,7 +201,8 @@ section {
 
 		& h1 {
 			padding: 0.5rem 2.6rem;
-			font-size: 2.4rem;
+			font-size: 2.6rem;
+			text-transform: uppercase;
 			background-color: var(--bb-grey);
 			color: var(--bb-pink);
 			border-radius: 1.3rem;
@@ -212,7 +216,8 @@ section {
 		gap: 5rem;
 
 		& a {
-			font-size: 2.4rem;
+			font-size: 2.6rem;
+			text-transform: uppercase;
 			color: var(--bb-black);
 			transition: color 0.4s;
 			cursor: pointer;
@@ -223,238 +228,7 @@ section {
 		}
 	}
 }
-// .tickets {
-// 	opacity: 0;
-// 	pointer-events: none;
-// 	color: var(--bb-white);
-// 	&__box {
-// 		margin: 0 auto;
-// 		max-width: 600px;
-// 		background: rgba($color: #000000, $alpha: 0.6);
-// 	}
 
-// 	&__title {
-// 		padding: 2rem;
-// 		text-align: center;
-
-// 		& a {
-// 			color: var(--bb-red);
-// 		}
-// 		& span {
-// 			color: var(--bb-fluo);
-// 		}
-// 	}
-
-// 	&__form {
-// 		position: relative;
-// 		margin: 0 auto;
-// 		padding: 3rem 2rem 0;
-// 		display: flex;
-// 		flex-direction: column;
-// 		justify-content: center;
-// 		align-items: center;
-// 		height: 100%;
-
-// 		& h4 {
-// 			margin-bottom: 2rem;
-// 			padding: 1rem 3rem;
-// 			display: block;
-// 			background-color: var(--bb-red);
-// 			color: var(--bb-white);
-// 		}
-
-// 		& h5 {
-// 			margin: 0 auto;
-// 			padding: 3rem 1rem;
-// 			color: var(--bb-white);
-// 			text-align: center;
-// 			font-size: 1.4rem;
-// 		}
-
-// 		&::before {
-// 			padding: 1rem 2rem;
-// 			position: absolute;
-// 			top: 0;
-// 			left: 0;
-// 			display: flex;
-// 			justify-content: center;
-// 			align-items: center;
-// 			width: 100%;
-// 			height: 100%;
-// 			background: rgba($color: #000000, $alpha: 0.8);
-// 			font-size: 1.6rem;
-// 			font-family: 'Share Tech Mono', monospace;
-// 			text-align: center;
-// 			z-index: 5;
-// 			content: 'Rejestracja została zakończona – mamy komplet! Dziękujemy za zaufanie i ogromne zainteresowanie. Tych, którym nie udało się zapisać, zapraszamy do śledzenia naszych social mediów – być może jeszcze w tym roku pojawi się dodatkowa szansa.';
-// 		}
-// 	}
-// 	&__form-row-box {
-// 		max-width: 450px;
-// 		width: 100%;
-// 	}
-
-// 	&__form-row {
-// 		margin: 2rem 0;
-// 		display: grid;
-// 		grid-template-columns: 1fr 1fr;
-// 		grid-template-rows: minmax(auto, 35px);
-// 		& label {
-// 			margin: auto 0;
-// 			padding: 0 1rem;
-// 			font-size: 1.8rem;
-// 			text-transform: uppercase;
-// 		}
-
-// 		&:nth-of-type(1) {
-// 			& label {
-// 				color: var(--bb-salmon);
-// 			}
-// 		}
-// 		&:nth-of-type(2) {
-// 			& label {
-// 				color: var(--bb-blue);
-// 			}
-// 		}
-// 		&:nth-of-type(3) {
-// 			& label {
-// 				color: var(--bb-red);
-// 			}
-// 		}
-// 		&:nth-of-type(4) {
-// 			& label {
-// 				color: var(--bb-fluo);
-// 			}
-// 		}
-// 		&:nth-of-type(5) {
-// 			& label {
-// 				color: var(--bb-purple);
-// 			}
-// 		}
-// 		&:nth-of-type(6) {
-// 			position: relative;
-// 			grid-template-columns: 1fr auto;
-// 			grid-template-rows: repeat(5, minmax(auto, 35px));
-// 			align-items: center;
-// 			gap: 0.5rem 0;
-
-// 			& label {
-// 				display: inline-block;
-// 				font-size: 0.8rem;
-// 				text-align: start;
-// 			}
-// 			& input {
-// 				position: relative;
-// 				opacity: 0;
-// 				cursor: pointer;
-// 			}
-
-// 			& span {
-// 				display: inline-block;
-// 				border: 3px solid #f72664;
-// 				background-color: white;
-// 				box-sizing: border-box;
-// 				width: 20px;
-// 				height: 20px;
-
-// 				&:has(> input:checked) {
-// 					background-color: #f72664;
-// 				}
-// 			}
-// 		}
-// 	}
-
-// 	& button {
-// 		padding: 0.8rem 2rem;
-// 		font-size: 1.6rem;
-// 		font-family: 'VHSGothic';
-// 		text-transform: uppercase;
-// 		cursor: pointer;
-// 	}
-
-// 	&__send-box {
-// 		position: relative;
-// 	}
-// 	.sendingProceed {
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		display: none;
-// 		justify-content: center;
-// 		align-items: center;
-// 		width: 100%;
-// 		height: 100%;
-// 		background: rgba($color: #000000, $alpha: 0.8);
-// 		color: var(--bb-red);
-
-// 		&.active {
-// 			display: flex;
-// 		}
-// 	}
-
-// 	&__sendBtn {
-// 		display: block;
-// 		margin: 0 0 0 auto;
-// 		width: auto;
-// 		height: 100%;
-// 		background: var(--bb-fluo);
-// 		border: none;
-// 		color: var(--bb-red);
-
-// 		transition: color 0.4s, background-color 0.4s;
-
-// 		&:hover {
-// 			color: var(--bb-black);
-// 			background-color: var(--bb-white);
-// 		}
-// 	}
-// 	&__form-popup {
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		width: 100%;
-// 		height: 100%;
-// 		background: rgba($color: #000000, $alpha: 0.8);
-
-// 		display: none;
-// 		flex-direction: column;
-// 		justify-content: center;
-// 		align-items: center;
-// 		z-index: 6;
-
-// 		&--msg {
-// 			padding: 1rem 2rem;
-// 			font-size: 1.6rem;
-// 			font-family: 'Share Tech Mono', monospace;
-// 			text-align: center;
-// 		}
-
-// 		&--closeBtn {
-// 			display: none;
-// 			margin: 2rem 0;
-// 			background: var(--bb-fluo);
-// 			border: none;
-// 			color: var(--bb-red);
-// 		}
-
-// 		&.limit {
-// 			display: flex;
-// 		}
-
-// 		&.active {
-// 			display: flex;
-// 			.tickets {
-// 				&__form-popup--closeBtn {
-// 					display: inline-block;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	&.active {
-// 		opacity: 1;
-// 		pointer-events: all;
-// 	}
-// }
 .email,
 .newsletter-delete {
 	width: 100%;
@@ -501,7 +275,8 @@ section {
 
 		& h3 {
 			padding: 1rem 0 0.5rem;
-			font-size: 1.4rem;
+			font-size: 2rem;
+			text-transform: uppercase;
 			color: var(--bb-white);
 		}
 
@@ -516,19 +291,14 @@ section {
 				border-radius: 1.2rem;
 				line-height: 0.4rem;
 				border: none;
-
-				// &::placeholder {
-				// 	font-family: 'VHSGothic', sans-serif;
-				// 	font-size: 1.2rem;
-				// 	text-transform: uppercase;
-				// 	color: var(--bb-pink);
-				// }
 			}
 
 			& input,
 			input::placeholder {
-				font-family: 'VHSGothic', sans-serif;
+				font-family: var(--font-second);
 				font-size: 1.2rem;
+				font-weight: 700;
+				letter-spacing: 0.2rem;
 				color: var(--bb-pink);
 				&::placeholder {
 					text-transform: uppercase;
@@ -556,6 +326,7 @@ section {
 			display: flex;
 			align-items: center;
 			font-size: 4.2rem;
+			text-transform: uppercase;
 			color: var(--bb-white);
 
 			& img {
@@ -588,7 +359,7 @@ section {
 		& label {
 			margin: auto 0;
 			padding: 0 1rem;
-			font-size: 1.6rem;
+			font-size: 2.6rem;
 			text-transform: uppercase;
 		}
 	}
@@ -602,10 +373,12 @@ section {
 		user-select: none;
 
 		& a {
+			padding: 1rem .5rem;
 			color: var(--bb-pink);
+			text-transform: uppercase;
 		}
 		& label {
-			font-size: 0.9rem;
+			font-size: 1.6rem;
 			color: var(--bb-black);
 		}
 
@@ -672,6 +445,12 @@ section {
 	&__unsubscribe {
 		padding: 1rem 1rem 2rem;
 		color: var(--bb-salmon);
+
+		& a {
+			font-size: 1.6rem;
+			text-transform: uppercase;
+			letter-spacing: .2rem;
+		}
 	}
 	&.active {
 		opacity: 1;
@@ -711,6 +490,7 @@ section {
 	}
 
 	&__container {
+		padding: 0 0.5rem;
 		width: 100%;
 		height: 100%;
 		display: flex;
@@ -718,11 +498,12 @@ section {
 		justify-content: center;
 		align-items: center;
 		background: rgba($color: #000000, $alpha: 0.8);
-		font-family: 'Visitor', sans-serif;
+		font-family: var(--font-third);
 
 		&--msg {
 			padding: 1rem 0;
-			font-size: 1.6rem;
+			font-size: 1.8rem;
+			letter-spacing: 0.3rem;
 			text-align: center;
 			color: var(--bb-white);
 		}
@@ -737,7 +518,8 @@ section {
 			font-size: 2rem;
 			border-radius: 1rem;
 			text-transform: uppercase;
-			font-family: 'Visitor', sans-serif;
+			font-family: var(--font-third);
+			letter-spacing: 0.3rem;
 		}
 	}
 }
@@ -788,7 +570,7 @@ section {
 	}
 	p,
 	span {
-		font-family: 'VHSGothic', sans-serif;
+		font-family: var(--font-first);
 	}
 
 	&__box {
@@ -812,7 +594,8 @@ section {
 		max-width: 680px;
 		& p {
 			text-align: center;
-			font-size: 2rem;
+			font-size: 3rem;
+			letter-spacing: 0.4rem;
 		}
 	}
 
@@ -826,13 +609,14 @@ section {
 
 		& span {
 			padding: 2rem 0;
-			font-size: 2rem;
+			font-size: 3rem;
 			color: var(--bb-grey);
 			text-transform: uppercase;
 
 			& a {
 				text-transform: lowercase;
 				transition: color 0.4s;
+				letter-spacing: 0.2rem;
 
 				&:hover {
 					color: var(--bb-white);
@@ -856,8 +640,9 @@ section {
 
 	h2 {
 		padding: 1rem 0 2rem;
+		font-size: 3.6rem;
 		text-align: center;
-		font-size: 2.6rem;
+		text-transform: uppercase;
 	}
 
 	ol {
@@ -866,13 +651,16 @@ section {
 
 	li {
 		padding: 1rem 0;
-		font-size: 1.6rem;
-		font-weight: bold;
+		font-size: 2.6rem;
+		text-transform: uppercase;
+		letter-spacing: .2rem;
 	}
 	ul,
 	ul li {
 		padding: 0.2rem 0;
-		font-size: 1.2rem;
+		font-size: 1.8rem;
+		letter-spacing: .1rem;
+		text-transform: none;
 	}
 }
 
@@ -888,7 +676,9 @@ section {
 		justify-content: space-around;
 
 		a {
-			font-size: 1.2rem;
+			font-family: var(--font-third);
+			font-size: 1.7rem;
+			letter-spacing: .2rem;
 		}
 	}
 

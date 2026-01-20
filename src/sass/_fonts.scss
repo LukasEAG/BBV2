@@ -1,38 +1,47 @@
 @font-face {
-    font-family: 'Dogica';
-    src: url(../../fonts/OTF/dogica.otf);
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'Dogica';
+	src: local('Dogica'), local('Dogica-Regular'), url('../../fonts/Dogica/dogica-regular.woff2') format('woff2'),
+		url('../../fonts/Dogica/dogica-regular.woff') format('woff'),
+		url('../../fonts/Dogica/dogica-regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+0000-00FF, U+0100-017F;
 }
 
 @font-face {
-    font-family: 'VHSGothic';
-    src: url(../../fonts/VHSGhotic/vhs-gothic.ttf);
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-
+	font-family: 'Dogica';
+	src: local('Dogica Bold'), local('Dogica-Bold'), url('../../fonts/Dogica/dogica-bold.woff2') format('woff2'),
+		url('../../fonts/Dogica/dogica-bold.woff') format('woff'),
+		url('../../fonts/Dogica/dogica-bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+0000-00FF, U+0100-017F;
 }
 
 @font-face {
-    font-family: 'Visitor';
-    src: url(../../fonts/Visitor/visitor1.ttf);
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Retro-Computer';
-    src: url(../../fonts/TTF/retro_computer.ttf);
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'BoldPixels';
+	src: local('BoldPixels'), local('BoldPixels-Regular'), url('../../fonts/BoldPixels/BoldPixels.woff2') format('woff2'),
+		url('../../fonts/BoldPixels/BoldPixels.woff') format('woff'),
+		url('../../fonts/BoldPixels/BoldPixels.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+0000-00FF, U+0100-017F;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-.share-tech-mono-regular {
-  font-family: "Share Tech Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
+@font-face {
+	font-family: 'GNUUnifont';
+	src: local('GNU Unifont'), url('../../fonts/UniFont/gnu-unifont.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+0000-00FF, U+0100-017F, U+0180-024F;
+}
+
+:root {
+	--font-first: 'BoldPixels', 'GNUUnifont', 'Dogica', monospace;
+	--font-second: 'Dogica', 'GNUUnifont', monospace;
+	--font-third: 'GNUUnifont', 'Dogica', monospace;
 }
