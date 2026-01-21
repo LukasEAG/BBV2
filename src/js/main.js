@@ -6,10 +6,11 @@ window.addEventListener('scroll', () => {
 const body = document.querySelector('body')
 const mobileNav = document.querySelector('.nav-menu__links')
 const btnOpenNav = document.querySelector('.nav-menu__mobile-open-btn')
-const menuBtns = Array.from(document.querySelectorAll('.nav-menu__link')).filter(el => el.classList.length === 1)
+const menuBtns = Array.from(document.querySelectorAll('[btnMenu]')).filter(el => el.classList.length === 1)
 const contactDiv = document.querySelector('#contact')
-const btnCloseContact = document.querySelectorAll('.close-contact')
+const btnCloseContact = document.querySelectorAll('[btnCloseContact]')
 const submitButton = document.querySelector('.email__submit')
+const homeBtn = document.querySelectorAll('[btnHome]')
 
 const navBarBgHandler = () => {
 	if (window.scrollY > 10) {
@@ -43,7 +44,6 @@ const openContactHandler = () => {
 const closeContactHandler = () => {
 	contactDiv.classList.remove('active')
 	body.classList.remove('menuActive')
-
 }
 const isContactOpen = () => contactDiv.classList.contains('active')
 
@@ -70,6 +70,14 @@ btnOpenNav.addEventListener('click', () => {
 btnCloseContact.forEach(btn => {
 	btn.addEventListener('click', () => {
 		closeContactHandler()
+	})
+})
+homeBtn.forEach(btn => {
+	btn.addEventListener('click', () => {
+		mobileNav.classList.remove('active')
+		body.classList.remove('menuActive')
+		navBar.classList.remove('background')
+		contactDiv.classList.remove('active')
 	})
 })
 document.addEventListener('DOMContentLoaded', () => {
