@@ -6,11 +6,16 @@
 				justify-items: center;
 				grid-template-columns: repeat(2, 1fr);
 				grid-template-rows: repeat(2, 1fr);
+
+				& a {
+					width: 100%;
+				}
 			}
 
 			&__logos {
 				grid-row: 1;
 				grid-column: span 2;
+				width: 100%;
 			}
 		}
 	}
@@ -84,7 +89,7 @@
 		}
 		.footer {
 			&__container {
-				padding: 4rem 2rem 0;
+				padding: 4rem 3rem 0;
 			}
 		}
 	}
@@ -204,7 +209,7 @@
 		.header {
 			&__socials-list {
 				& a {
-					font-size: 1.8rem;
+					font-size: 2rem;
 				}
 			}
 		}
@@ -263,23 +268,24 @@
 		}
 		.footer {
 			&__container {
-				padding: 2rem 1rem 1rem;
+				padding: 2rem 3.5rem 1rem;
 				grid-template-columns: 1fr;
 				grid-template-rows: repeat(3, auto);
 
 				& a {
-					width: 100%;
+					font-size: 1.5rem;
 				}
 			}
 			&__dot,
 			&__bb {
-				padding: 2rem 0 1rem;
 				text-align: center;
 			}
 			&__dot {
+				padding: 2rem 0 1rem;
 				grid-row: 2;
 			}
 			&__bb {
+				padding: 1rem 0 2rem;
 				grid-row: 3;
 			}
 			&__logos {
@@ -287,7 +293,7 @@
 				gap: 1rem 0;
 
 				& img {
-					max-height: 35px;
+					max-height: 30px;
 				}
 			}
 		}
