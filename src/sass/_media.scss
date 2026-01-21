@@ -147,7 +147,7 @@
 				padding: 2rem;
 				& img {
 					padding-bottom: 5rem;
-					max-width: 150px;
+					max-width: 125px;
 				}
 			}
 			&__title-text {
@@ -263,9 +263,13 @@
 		}
 		.footer {
 			&__container {
-				padding: 3rem 2rem;
+				padding: 2rem 1rem 1rem;
 				grid-template-columns: 1fr;
 				grid-template-rows: repeat(3, auto);
+
+				& a {
+					width: 100%;
+				}
 			}
 			&__dot,
 			&__bb {
@@ -279,11 +283,11 @@
 				grid-row: 3;
 			}
 			&__logos {
-				gap: 2rem 3rem;
-				flex-wrap: wrap;
+				padding: 2rem 0;
+				gap: 1rem 0;
 
-				& a {
-					width: 40%;
+				& img {
+					max-height: 35px;
 				}
 			}
 		}

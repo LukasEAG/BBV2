@@ -110,7 +110,7 @@ section {
 		display: flex;
 		justify-content: flex-end;
 		& img {
-			max-width: 125px;
+			max-width: 100px;
 			width: 100%;
 			height: auto;
 		}
@@ -586,6 +586,7 @@ section {
 
 		& img {
 			padding-bottom: 10rem;
+			max-width: 160px;
 		}
 	}
 
@@ -594,7 +595,7 @@ section {
 		max-width: 680px;
 		& p {
 			text-align: center;
-			font-size: 3rem;
+			font-size: 2.6rem;
 			letter-spacing: 0.4rem;
 		}
 	}
@@ -609,7 +610,7 @@ section {
 
 		& span {
 			padding: 2rem 0;
-			font-size: 3rem;
+			font-size: 2.6rem;
 			color: var(--bb-grey);
 			text-transform: uppercase;
 
@@ -632,7 +633,7 @@ section {
 
 .privacyPolicy {
 	margin: 10rem auto 5rem;
-	padding: 2rem 5rem;
+	padding: 2rem 3rem;
 	position: relative;
 	list-style-position: inside;
 	li {
