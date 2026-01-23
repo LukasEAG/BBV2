@@ -98,7 +98,6 @@ const createSpanHendler = msg => {
 	span.innerText = msg
 	closePopupBtn.insertAdjacentElement('beforebegin', span)
 
-	// regFormPopupContainer.appendChild(span)
 	regFormPopup.classList.add('active')
 }
 const registrationForm = document.querySelector('[registration-form="subscribe"]')
@@ -119,8 +118,7 @@ const sendFormToBackend = async e => {
 	}
 	sendingProccede.classList.add('active')
 	try {
-		// const res = await fetch('/api/newsletter', {
-		const res = await fetch('http://localhost:8000/newsletter.php', {
+		const res = await fetch('/api/newsletter.php', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(data),
@@ -190,7 +188,7 @@ const unsubscribeNewsLetter = async e => {
 	}
 	sendingProccede.classList.add('active')
 	try {
-		const res = await fetch('http://localhost:8000/unsubscribe.php', {
+		const res = await fetch('/api/unsubscribe.php', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

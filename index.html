@@ -22,8 +22,7 @@
     <link rel="apple-touch-icon" href="./dist/img/favicons/apple-touch-icon.png">
     <link rel="manifest" href="./dist/img/favicons/site.webmanifest">
     <link rel="canonical" href="https://bliskobrzegu.pl">
-    <link rel="stylesheet" href="./dist/css/style.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" href="./dist/css/style.v2.min.css">
 
 
 
@@ -48,7 +47,7 @@
                     <button class="nav-menu__mobile-open-btn"> <svg xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2" aria-label="mobile-menu-btn">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M4 6l16 0" />
                             <path d="M4 12l16 0" />
@@ -70,7 +69,7 @@
 
             <div class="video__box">
                 <video width="100%" height="100%" autoplay="" loop="" muted="" playsinline="" preload="metadata"
-                    poster="./dist/img/bbHero.png">
+                    poster="./dist/img/bbHero.webp">
                     <source src="./dist/img/bbMovie.mp4">
                 </video>
             </div>
@@ -102,9 +101,9 @@
                         <div class="email__form-box">
                             <h3>Bądź zawsze pierwszy</h3>
                             <form registration-form="subscribe" class="email__form">
-                                <div form-popup class="form-popup">
+                                <div form-popup class="form-popup " >
                                     <div form-popup-container class="form-popup__container">
-                                        <button close-popup-btn class="form-popup__container--closeBtn">Zamknij</button>
+                                        <button close-popup-btn class="form-popup__container--closeBtn" aria-label="close-popup-btn">Zamknij</button>
                                     </div>
                                 </div>
                                 <div class="email__form-row">
@@ -125,15 +124,15 @@
                                         Wyrażam zgodę na otrzymywanie od EAG właściciela marki BLISKO BRZEGU
                                         informacji
                                         o aktualnościach, nowościach i promocjach na podany adres e-mail zgodnie z <a
-                                            href="/BBV2/privacyPolicy.html">polityką prywatności</a>. </label>
+                                            href="/privacyPolicy.html">polityką prywatności</a>. </label>
 
                                 </div>
                                 <div class="email__unsubscribe">
-                                    <a href="/BBV2/newsletterUnsubscribe.html">Wypisz się z newslettera</a>
+                                    <a href="/newsletterUnsubscribe.html">Wypisz się z listy obecnści</a>
                                 </div>
                                 <div class="email__send-box">
 
-                                    <button class="email__submit" type="submit">
+                                    <button class="email__submit" type="submit" aria-label="send-form-btn">
                                     </button>
                                     <p class="sendingProceed">Wysyłanie</p>
                                 </div>
@@ -150,10 +149,10 @@
         </section>
         <section id="contact">
             <div class="contact">
-                <button class="close-contact" btnCloseContact><img src="./dist/img/x.png" alt=""></button>
+                <button class="close-contact" btnCloseContact><img src="./dist/img/x.png" alt="close-section-btn" aria-label="close-seciton-contact-btn"></button>
                 <div class="wrapper">
                     <div class="contact__box">
-                        <img src="./dist/img/BBLogo.svg" alt="">
+                        <img src="./dist/img/BBLogo.svg" alt="Logo Festiwalu Blisko Brzegu">
                         <div class="contact__title-text">
                             <p>Chcesz podjąć współpracę z BliskoBrzegu, szukasz unikalnej formy promocji swoich
                                 produktów, marki lub jesteś artystą? </p>
@@ -194,7 +193,7 @@
     </footer>
 
 
-    <script src="./dist/js/main.min.js"></script>
+    <script src="./dist/js/main.v2.min.js"></script>
 </body>
 
 </html>
