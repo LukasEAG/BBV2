@@ -32,9 +32,8 @@
         <div class="nav-wrapper">
             <div class="nav-menu__container">
 
-
-                <div class="nav-menu__others">
-                    <li class="nav-menu__others-link"><a href="https://bb2025.bliskobrzegu.pl/" target=”_blank” rel=”noopener”>BB 2025</a></li>
+                <div class="nav-menu__logo">
+                    <a href="#home" btnHome><img src="./dist/img/BBLogo.svg" alt="Logo festiwalu Blisko Brzegu"></a>
                 </div>
                 <ul class="nav-menu__links">
                     <li class="nav-menu__link" btnMenu><a href="#email">News</a></li>
@@ -47,15 +46,17 @@
                     <button class="nav-menu__mobile-open-btn"> <svg xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2" aria-label="mobile-menu-btn">
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+                            aria-label="mobile-menu-btn">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M4 6l16 0" />
                             <path d="M4 12l16 0" />
                             <path d="M4 18l16 0" />
                         </svg></button>
                 </div>
-                <div class="nav-menu__logo">
-                    <a href="#home" btnHome><img src="./dist/img/BBLogo.svg" alt="Logo festiwalu Blisko Brzegu"></a>
+                <div class="nav-menu__others">
+                    <li class="nav-menu__others-link"><a href="https://bb2025.bliskobrzegu.pl/" target=”_blank”
+                            rel=”noopener”>BB 2025</a></li>
                 </div>
             </div>
         </div>
@@ -74,7 +75,7 @@
                 </video>
             </div>
             <div class="header__socials">
-                <h1 class="header__title">Jesteśmy Blisko</h1>
+                <h1 class="header__title">Blisko Brzegu 2026</h1>
                 <div class="header__socials-list">
                     <a href="https://www.instagram.com/bliskobrzegu?igsh=MTRnMTllM3l2bXZtcw==" target="_blank"
                         rel="noopener noreferrer">Instagram .</a>
@@ -83,14 +84,15 @@
                     <a href="https://youtube.com/@bliskobrzegu?si=aI9c39qxahACq7ZT" target="_blank"
                         rel="noopener noreferrer">YouTube</a>
                 </div>
+                <h2 class="header__title">Plaża/Dargocice k.Gościna</h2>
             </div>
         </div>
     </header>
     <main>
         <section id="email">
             <div class="email">
-                <div class="email__graphics email__graphics--bar-code"></div>
-                <div class="email__graphics email__graphics--eye"></div>
+                <!-- <div class="email__graphics email__graphics--bar-code"></div> -->
+                <!-- <div class="email__graphics email__graphics--eye"></div> -->
                 <div class="wrapper">
                     <div class="email__graphics email__graphics--hand"></div>
                     <div class="email__box">
@@ -101,15 +103,15 @@
                         <div class="email__form-box">
                             <h3>Bądź zawsze pierwszy</h3>
                             <form registration-form="subscribe" class="email__form">
-                                <div form-popup class="form-popup " >
+                                <div form-popup class="form-popup ">
                                     <div form-popup-container class="form-popup__container">
-                                        <button close-popup-btn class="form-popup__container--closeBtn" aria-label="close-popup-btn">Zamknij</button>
+                                        <button close-popup-btn class="form-popup__container--closeBtn"
+                                            aria-label="close-popup-btn">Zamknij</button>
                                     </div>
                                 </div>
                                 <div class="email__form-row">
                                     <label for="userName">Imię</label>
-                                    <input type="text" name="userName" id="userName"
-                                        placeholder="min 3, max 13 znaków">
+                                    <input type="text" name="userName" id="userName" placeholder="min 3, max 13 znaków">
                                 </div>
 
                                 <div class="email__form-row">
@@ -149,7 +151,8 @@
         </section>
         <section id="contact">
             <div class="contact">
-                <button class="close-contact" btnCloseContact><img src="./dist/img/x.png" alt="close-section-btn" aria-label="close-seciton-contact-btn"></button>
+                <button class="close-contact" btnCloseContact><img src="./dist/img/x.png" alt="close-section-btn"
+                        aria-label="close-seciton-contact-btn"></button>
                 <div class="wrapper">
                     <div class="contact__box">
                         <img src="./dist/img/BBLogo.svg" alt="Logo Festiwalu Blisko Brzegu">
@@ -173,6 +176,7 @@
     </main>
     <footer>
         <div class="footer">
+            <div class="footer__graphics footer__graphics--bar-code"></div>
             <div class="wrapper">
                 <div class="footer__container">
                     <a class="footer__dot" href="https://dotcreaction.com/" rel=”noopener”>Partner Technologiczny
@@ -186,7 +190,7 @@
                         <a href="https://goscino.pl/centrum-kultury-i-ksiazki.html" rel=”noopener”><img
                                 src="./dist/img/ckkLogo.svg" alt="Logo centrum kultury i ksiazki"></a>
                     </div>
-                    <a class="footer__bb" href="#home">Blisko Brzegu <span class="footer__foot-year"></span></a>
+                    <!-- <a class="footer__bb" href="#home">Blisko Brzegu <span class="footer__foot-year"></span></a> -->
                 </div>
             </div>
         </div>

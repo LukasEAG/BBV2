@@ -40,8 +40,12 @@
 	unicode-range: U+0000-00FF, U+0100-017F, U+0180-024F;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
 :root {
 	--font-first: 'BoldPixels', 'GNUUnifont', 'Dogica', monospace;
 	--font-second: 'Dogica', 'GNUUnifont', monospace;
 	--font-third: 'GNUUnifont', 'Dogica', monospace;
+	--font-fourth: "Righteous", sans-serif;
 }
