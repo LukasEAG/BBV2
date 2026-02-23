@@ -5,3 +5,5 @@ package.json
 .DS_Store
 backend
 main.js
+robots.txt
+sitemap.xml
