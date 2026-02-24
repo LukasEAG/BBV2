@@ -6,4 +6,5 @@ package.json
 backend
 main.js
 robots.txt
-sitmap.xml
+sitemap.xml
+.htaccess
