@@ -104,7 +104,6 @@
 				min-height: 100vh;
 				height: 100%;
 				background: var(--bb-light-grey);
-				// background: url(../img/backgroundBB.webp);
 				overflow-y: scroll;
 				transition: transform 0.4s;
 
@@ -133,12 +132,12 @@
 		.email,
 		.newsletter-delete {
 			padding: 0;
-			background-image: url(/dist/img/emailBgMobile.png);
+			background-image: url(../../dist/img/emailBgMobile.png);
 			background-size: contain;
 			background-position: left -100px top;
 
 			&.center {
-				background-image: url(/dist/img/emailBgMobile.png);
+				background-image: url(../../dist/img/emailBgMobile.png);
 				background-size: contain;
 				background-position: left -100px top;
 			}

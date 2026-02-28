@@ -81,10 +81,6 @@ section {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	// min-height: 100vh;
-	// background: url(../img/backgroundBB.webp);
-	// background-size: cover;
-	// background-position: center;
 }
 
 .nav-menu {
@@ -187,9 +183,6 @@ section {
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
-	// background: url(../img/backgroundBB.webp);
-	// background-size: cover;
-	// background-position: center;
 	z-index: 0;
 
 	.video__box {
@@ -254,31 +247,13 @@ section {
 	padding: 5rem 0 3rem;
 	width: 100%;
 	z-index: 0;
-	background-image: url(/dist/img/emailBg.png);
+	background-image: url(../../dist/img/emailBg.png);
 	background-position: center bottom -50px;
 	background-repeat: no-repeat;
 
 	 &.center {
 		background-position: center center;
 	 }
-
-	// &__graphics {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	z-index: 1;
-
-	// 		&--eye {
-	// 			background: url(../../dist/img/eyeEmail.svg);
-	// 			background-size: 180px;
-	// 			background-position: right 100px bottom 120px;
-	// 			background-repeat: no-repeat;
-	// 		}
-	
-	// }
-
 	&__box {
 		margin: 0 auto;
 		padding: 6rem 0;
@@ -290,19 +265,6 @@ section {
 		height: 100%;
 
 		z-index: 10;
-
-		// &::before {
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 0;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	background: url(../../dist/img/emailBg.png);
-		// 	background-size: 45%;
-		// 	background-position: 35% 0%;
-		// 	background-repeat: no-repeat;
-		// 	content: '';
-		// }
 		& h3 {
 			padding: 1rem 0 0.5rem;
 			font-size: 2rem;
