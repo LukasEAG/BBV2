@@ -12,6 +12,9 @@
 				grid-column: span 2;
 			}
 		}
+		.email {
+			padding: 7rem 0 0;
+		}
 		.footer {
 			&__graphics {
 				&--bar-code {
@@ -81,6 +84,13 @@
 			&__others {
 				width: 100%;
 			}
+			&__logo {
+				justify-content: flex-start;
+			}
+
+			&__others {
+				justify-content: flex-end;
+			}
 
 			&__links {
 				padding: 5rem 0 0;
@@ -108,7 +118,7 @@
 		}
 		.footer {
 			&__container {
-				padding: 4rem 3rem 0;
+				padding: 0 3rem;
 			}
 		}
 	}
@@ -122,18 +132,26 @@
 		}
 		.email,
 		.newsletter-delete {
+			padding: 0;
+			background-image: url(/dist/img/emailBgMobile.png);
+			background-size: contain;
+			background-position: left -100px top;
+
+			&.center {
+				background-image: url(/dist/img/emailBgMobile.png);
+				background-size: contain;
+				background-position: left -100px top;
+			}
+
 			&__graphics {
 				&--eye {
 					display: none;
 				}
-				&--bar-code {
-					background-size: 120px;
-				}
 			}
 			&__title {
-				padding: 6rem 0 0;
+				padding: 10rem 0 0;
 				& h2 {
-					font-size: 3.8rem;
+					font-size: 3.2rem;
 				}
 			}
 			&__form {
@@ -193,6 +211,9 @@
 		}
 	}
 	@media screen and (max-width: 565px) {
+		:root {
+			--nav-height: 60px;
+		}
 		nav {
 			height: 60px;
 		}
@@ -211,6 +232,7 @@
 				}
 			}
 			&__logo img {
+				padding: 0.2rem 0 0;
 				max-height: 45px;
 				width: auto;
 			}
@@ -239,7 +261,13 @@
 		}
 		.email,
 		.newsletter-delete {
+			background-position: left -75px top;
+
+			&.center {
+				background-position: left -75px top;
+			}
 			&__box {
+				padding: 3rem 0;
 				& form {
 					& input[type='text'] {
 						margin: 0.4rem 0;
@@ -274,7 +302,7 @@
 			}
 		}
 		.privacyPolicy {
-			margin: 7rem auto 5rem;
+			margin: var(--nav-height) auto 0;
 
 			h2 {
 				padding: 1rem 0 2rem;
@@ -324,13 +352,31 @@
 			}
 		}
 	}
+	@media screen and (max-width: 500px) {
+		.email,
+		.newsletter-delete {
+			background-position: left -75px top 10px;
+
+			&.center {
+				background-position: left -75px top 10px;
+			}
+		}
+	}
 	@media screen and (max-width: 360px) {
 		.header {
 			&__socials {
-				padding: 3rem 1rem;
+				padding: 3rem 1rem 0;
 				& a {
 					font-size: 1.6rem;
 				}
+			}
+		}
+		.email,
+		.newsletter-delete {
+			background-position: left -50px top 50px;
+
+			&.center {
+				background-position: left -50px top 50px;
 			}
 		}
 	}
