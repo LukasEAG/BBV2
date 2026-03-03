@@ -129,7 +129,6 @@ section {
 		align-items: center;
 		gap: 2rem;
 		width: 70%;
-		height: 100%;
 		text-transform: uppercase;
 		font-size: 2rem;
 		font-family: var(--font-fourth);
@@ -526,6 +525,7 @@ section {
 	background: var(--bb-light-grey);
 	transform: translate(-100%, 0%);
 	transition: transform 0.4s;
+	z-index: 1;
 
 	&.active {
 		transform: translate(0%, 0%);
