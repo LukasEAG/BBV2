@@ -21,8 +21,13 @@ html {
 }
 body {
 	position: relative;
-	background: var(--bb-nav);
+	background: var(--bb-light-grey);
 	height: 100%;
+}
+
+:root {
+	--nav-height: 100px;
+	--footer-height: 366px;
 }
 
 body.menuActive {
@@ -32,7 +37,7 @@ body.menuActive {
 nav {
 	position: fixed;
 	width: 100%;
-	height: 100px;
+	height: var(--nav-height);
 	z-index: 10;
 }
 header,
@@ -40,6 +45,7 @@ main,
 footer {
 	overflow: hidden;
 }
+
 button {
 	background: transparent;
 	border: none;
@@ -58,7 +64,7 @@ li {
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1920px;
+	max-width: 1210px;
 	height: 100%;
 }
 .nav-wrapper {
@@ -67,22 +73,22 @@ li {
 	max-width: 1430px;
 	height: 100%;
 }
-
+section#newsletter-delete {
+	padding-top: var(--nav-height);
+	min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+}
 section {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	min-height: 100vh;
-	background: url(../img/backgroundBB.webp);
-	background-size: cover;
-	background-position: center;
 }
+
 .nav-menu {
 	height: 100%;
 	width: 100%;
 
 	&.background {
-		background: #454845eb;
+		background: #b3b3b3e6;
 	}
 	&__container {
 		padding: 0 5rem;
@@ -119,22 +125,24 @@ section {
 	&__links {
 		padding: 0.5rem 1rem;
 		display: flex;
-		justify-content: flex-end;
+		justify-content: center;
 		align-items: center;
 		gap: 2rem;
 		width: 70%;
-		height: 100%;
 		text-transform: uppercase;
-		font-size: 1.4rem;
+		font-size: 2rem;
+		font-family: var(--font-fourth);
 		color: var(--bb-white);
 	}
 
 	&__link {
-		background: var(--bb-grey);
+		color: var(--bb-black);
+		background: transparent;
 		transition: background 0.4s;
 
 		&:hover:not(.not-active) {
-			background: var(--bb-green);
+			color: var(--bb-white);
+			background: var(--bb-black);
 		}
 	}
 
@@ -153,14 +161,17 @@ section {
 	}
 
 	&__others-link {
-		background: var(--bb-grey);
-		color: var(--bb-pink);
-		font-size: 2rem;
-		font-weight: 600;
-		transition: background 0.4s;
+		padding: 0.6rem 0.3rem;
+		background: var(--bb-purple);
+		color: var(--bb-black);
+		font-size: 1.4rem;
+		font-family: var(--font-fourth);
+		transition:
+			background 0.4s,
+			color 0.4s;
 
 		&:hover {
-			background: var(--bb-purple);
+			background: var(--bb-black);
 			color: var(--bb-white);
 		}
 	}
@@ -171,9 +182,6 @@ section {
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
-	background: url(../img/backgroundBB.webp);
-	background-size: cover;
-	background-position: center;
 	z-index: 0;
 
 	.video__box {
@@ -193,18 +201,21 @@ section {
 	&__socials {
 		padding: 3rem 5rem;
 		display: flex;
-		justify-content: flex-start;
+		justify-content: space-between;
 		align-items: center;
 		gap: 5rem;
 		max-width: 1430px;
 		width: 100%;
 
-		& h1 {
+		& h1,
+		h2 {
 			padding: 0.5rem 2.6rem;
-			font-size: 2.6rem;
+			font-family: var(--font-fourth);
+			font-size: 2rem;
+			font-weight: 600;
+			text-align: center;
 			text-transform: uppercase;
-			background-color: var(--bb-grey);
-			color: var(--bb-pink);
+			color: var(--bb-black);
 			border-radius: 1.3rem;
 		}
 	}
@@ -213,10 +224,10 @@ section {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 5rem;
+		gap: 2rem;
 
 		& a {
-			font-size: 2.6rem;
+			font-size: 2.4rem;
 			text-transform: uppercase;
 			color: var(--bb-black);
 			transition: color 0.4s;
@@ -231,48 +242,27 @@ section {
 
 .email,
 .newsletter-delete {
+	padding: 5rem 0 3rem;
 	width: 100%;
-	background: url(../../dist/img/emailBg.png);
-	background-size: cover;
-	background-position: center;
 	z-index: 0;
+	background-image: url(../../dist/img/emailBg.webp);
+	background-position: center bottom -50px;
+	background-repeat: no-repeat;
 
-	&__graphics {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-
-		&--bar-code {
-			background: url(../../dist/img/barCode.svg);
-			background-size: 180px;
-			background-position: center bottom 5px;
-			background-repeat: no-repeat;
-			opacity: 0.7;
-		}
-
-		&--eye {
-			background: url(../../dist/img/eyeEmail.svg);
-			background-size: 180px;
-			background-position: right 100px bottom 120px;
-			background-repeat: no-repeat;
-		}
+	&.center {
+		background-position: center center;
 	}
-
 	&__box {
-		margin: 2rem auto 0;
-		padding: 4rem 0;
+		margin: 0 auto;
+		padding: 6rem 0;
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		max-width: 640px;
 		height: 100%;
-		z-index: 10;
 
+		z-index: 10;
 		& h3 {
 			padding: 1rem 0 0.5rem;
 			font-size: 2rem;
@@ -298,7 +288,7 @@ section {
 				font-family: var(--font-third);
 				font-size: 2rem;
 				letter-spacing: 0.25rem;
-				 text-indent: .1rem;
+				text-indent: 0.1rem;
 				color: var(--bb-pink);
 				&::placeholder {
 					text-transform: uppercase;
@@ -316,6 +306,7 @@ section {
 		}
 	}
 	&__title {
+		padding: 10rem 0 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -344,7 +335,8 @@ section {
 		justify-content: center;
 		align-items: center;
 		height: 100%;
-		max-height: 400px;
+		max-width: 640px;
+
 		z-index: 0;
 	}
 	&__form {
@@ -373,9 +365,14 @@ section {
 		user-select: none;
 
 		& a {
-			padding: 1rem .5rem;
+			padding: 1rem 0.5rem;
 			color: var(--bb-pink);
 			text-transform: uppercase;
+			transition: color 0.4s;
+		}
+
+		& a:hover {
+			color: var(--bb-white);
 		}
 		& label {
 			font-size: 1.6rem;
@@ -444,12 +441,17 @@ section {
 
 	&__unsubscribe {
 		padding: 1rem 1rem 2rem;
-		color: var(--bb-salmon);
+		color: var(--bb-black);
 
 		& a {
 			font-size: 1.6rem;
 			text-transform: uppercase;
-			letter-spacing: .2rem;
+			letter-spacing: 0.2rem;
+			transition: color 0.4s;
+		}
+
+		& a:hover {
+			color: var(--bb-white);
 		}
 	}
 	&.active {
@@ -459,7 +461,7 @@ section {
 }
 .newsletter-delete {
 	&__form-box {
-		max-height: 260px;
+		max-height: 350px;
 	}
 	&__title h2 {
 		display: block;
@@ -529,8 +531,10 @@ section {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	background: var(--bb-light-grey);
 	transform: translate(-100%, 0%);
 	transition: transform 0.4s;
+	z-index: 1;
 
 	&.active {
 		transform: translate(0%, 0%);
@@ -625,6 +629,44 @@ section {
 			}
 		}
 	}
+	&__links {
+		padding: 2rem 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-content: center;
+		text-align: center;
+
+		& h2 {
+			padding: 0 0 2rem;
+			font-size: 3rem;
+			text-transform: uppercase;
+			letter-spacing: 1rem;
+			text-align: center;
+			color: var(--bb-black);
+		}
+		span {
+			padding: 1.2rem 0;
+			font-size: 2.2rem;
+			text-transform: uppercase;
+
+			&:nth-of-type(1) {
+				color: var(--bb-purple);
+			}
+			&:nth-of-type(2) {
+				color: var(--bb-green);
+			}
+			& a {
+				transition: color 0.4s;
+				letter-spacing: 0.2rem;
+
+				&:hover {
+					color: var(--bb-white);
+				}
+			}
+		}
+	}
 	&.active {
 		opacity: 1;
 		pointer-events: all;
@@ -632,7 +674,7 @@ section {
 }
 
 .privacyPolicy {
-	margin: 10rem auto 5rem;
+	margin: var(--nav-height) auto 5rem;
 	padding: 2rem 3rem;
 	position: relative;
 	list-style-position: inside;
@@ -655,36 +697,63 @@ section {
 		padding: 1rem 0;
 		font-size: 2.6rem;
 		text-transform: uppercase;
-		letter-spacing: .2rem;
+		letter-spacing: 0.2rem;
 	}
 	ul,
 	ul li {
 		padding: 0.2rem 0;
 		font-size: 1.8rem;
-		letter-spacing: .1rem;
+		letter-spacing: 0.1rem;
 		text-transform: none;
 	}
 }
 
 .footer {
-	background: var(--bb-white);
+	position: relative;
 	width: 100%;
 	height: 100%;
+	z-index: 0;
+
+	&__graphics {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+
+		&--bar-code {
+			background: url(../../dist/img/barCode.svg);
+			background-size: 180px;
+			background-position: right 100px center;
+			background-repeat: no-repeat;
+			opacity: 0.3;
+		}
+	}
 
 	&__container {
 		margin: 0 auto;
-		padding: 5rem 1rem;
+		padding: 0rem 1rem 5rem;
+		position: relative;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
+		gap: 5rem;
 		justify-content: space-around;
 		max-width: 1430px;
+		z-index: 5;
 
 		a {
 			width: 25%;
 			font-family: var(--font-third);
 			font-size: 1.7rem;
-			letter-spacing: .2rem;
+			letter-spacing: 0.2rem;
 			text-align: center;
+			transform: scale(1);
+			transition: transform 0.4s;
+		}
+		& a:hover {
+			transform: scale(1.05);
 		}
 	}
 
@@ -696,7 +765,7 @@ section {
 		align-items: center;
 		max-width: 620px;
 		width: 50%;
-		background: var(--bb-black);
+		background: var(--bb-grey);
 		border-radius: 1.6rem;
 
 		& img {

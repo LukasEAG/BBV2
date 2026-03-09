@@ -240,19 +240,18 @@ section {
 	}
 }
 
-
 .email,
 .newsletter-delete {
 	padding: 5rem 0 3rem;
 	width: 100%;
 	z-index: 0;
-	background-image: url(../../dist/img/emailBg.png);
+	background-image: url(../../dist/img/emailBg.webp);
 	background-position: center bottom -50px;
 	background-repeat: no-repeat;
 
-	 &.center {
+	&.center {
 		background-position: center center;
-	 }
+	}
 	&__box {
 		margin: 0 auto;
 		padding: 6rem 0;
@@ -369,6 +368,11 @@ section {
 			padding: 1rem 0.5rem;
 			color: var(--bb-pink);
 			text-transform: uppercase;
+			transition: color 0.4s;
+		}
+
+		& a:hover {
+			color: var(--bb-white);
 		}
 		& label {
 			font-size: 1.6rem;
@@ -443,6 +447,11 @@ section {
 			font-size: 1.6rem;
 			text-transform: uppercase;
 			letter-spacing: 0.2rem;
+			transition: color 0.4s;
+		}
+
+		& a:hover {
+			color: var(--bb-white);
 		}
 	}
 	&.active {
@@ -452,7 +461,7 @@ section {
 }
 .newsletter-delete {
 	&__form-box {
-		max-height: 260px;
+		max-height: 350px;
 	}
 	&__title h2 {
 		display: block;
@@ -620,6 +629,44 @@ section {
 			}
 		}
 	}
+	&__links {
+		padding: 2rem 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-content: center;
+		text-align: center;
+
+		& h2 {
+			padding: 0 0 2rem;
+			font-size: 3rem;
+			text-transform: uppercase;
+			letter-spacing: 1rem;
+			text-align: center;
+			color: var(--bb-black);
+		}
+		span {
+			padding: 1.2rem 0;
+			font-size: 2.2rem;
+			text-transform: uppercase;
+
+			&:nth-of-type(1) {
+				color: var(--bb-purple);
+			}
+			&:nth-of-type(2) {
+				color: var(--bb-green);
+			}
+			& a {
+				transition: color 0.4s;
+				letter-spacing: 0.2rem;
+
+				&:hover {
+					color: var(--bb-white);
+				}
+			}
+		}
+	}
 	&.active {
 		opacity: 1;
 		pointer-events: all;
@@ -687,12 +734,14 @@ section {
 	&__container {
 		margin: 0 auto;
 		padding: 0rem 1rem 5rem;
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 5rem;
 		justify-content: space-around;
 		max-width: 1430px;
+		z-index: 5;
 
 		a {
 			width: 25%;
@@ -700,6 +749,11 @@ section {
 			font-size: 1.7rem;
 			letter-spacing: 0.2rem;
 			text-align: center;
+			transform: scale(1);
+			transition: transform 0.4s;
+		}
+		& a:hover {
+			transform: scale(1.05);
 		}
 	}
 

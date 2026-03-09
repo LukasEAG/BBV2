@@ -85,12 +85,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		openContactHandler()
 	}
 })
+window.addEventListener('load', () => {
+	checkRegLimit()
+})
 
 const regFormPopup = document.querySelector('[form-popup]')
 const regFormPopupContainer = document.querySelector('[form-popup-container]')
 const regFormMsg = document.querySelector('[registration-form-msg]')
 const sendingProccede = document.querySelector('.sendingProceed')
 const closePopupBtn = document.querySelector('[close-popup-btn]')
+let formBlocked = false
 
 const createSpanHendler = msg => {
 	const span = document.createElement('span')
@@ -98,6 +102,18 @@ const createSpanHendler = msg => {
 	span.innerText = msg
 	closePopupBtn.insertAdjacentElement('beforebegin', span)
 
+	regFormPopup.classList.add('active')
+}
+const blockFormHendler = msg => {
+	formBlocked = true
+	const span = document.createElement('span')
+	span.classList.add('form-popup__container--msg')
+	span.innerText = msg
+	closePopupBtn.insertAdjacentElement('beforebegin', span)
+	const registrationForm = document.querySelector('[registration-form="subscribe"]')
+	registrationForm.querySelectorAll('button').forEach(btn => btn.remove())
+
+	sendingProccede.classList.contains('active') ? sendingProccede.classList.remove('active') : none
 	regFormPopup.classList.add('active')
 }
 const registrationForm = document.querySelector('[registration-form="subscribe"]')
@@ -109,7 +125,27 @@ if (registrationForm) {
 		sendFormToBackend(e)
 	})
 }
+const checkRegLimit = async e => {
+	try {
+		const res = await fetch('/api/checkLimit', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+		})
+
+		const json = await res.json()
+
+		if (!json.allowed) {
+			blockFormHendler(json.message)
+			return
+		}
+		lastErrors = {}
+		return
+	} catch (err) {
+		createSpanHendler('Błąd połączenia z serwerem, spróbuj ponownie')
+	}
+}
 const sendFormToBackend = async e => {
+	if (formBlocked) return
 	const form = e.target
 	const data = {
 		name: form.querySelector('[name="userName"]')?.value || '',
@@ -118,7 +154,7 @@ const sendFormToBackend = async e => {
 	}
 	sendingProccede.classList.add('active')
 	try {
-		const res = await fetch('/api/newsletter.php', {
+		const res = await fetch('/api/newsletter', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(data),
@@ -127,7 +163,7 @@ const sendFormToBackend = async e => {
 
 		if (res.ok) {
 			createSpanHendler(`📩 Witaj, ${json.user_name} 
-Dziękujemy za zapisanie się do naszego newslettera ✅
+Dziękujemy za zapisanie się na naszą listę obecności ✅
 Teraz będziesz na bieżąco z ważnymi informacjami i wydarzeniami.
 📬 Sprawdź skrzynkę (oraz SPAM) — wysłaliśmy wiadomość powitalną.
 W razie pytań pisz do nas śmiało: 📧 ticket@bliskobrzegu.pl
@@ -143,7 +179,10 @@ Do zobaczenia nad wodą! 🌊 #BliskoBrzegu #DoZobaczenia`)
 				})
 
 				lastErrors = errors
+			} else if (!json.allowed) {
+				blockFormHendler(json.message)
 			} else if (json.error) {
+				console.log(json.error)
 				createSpanHendler(json.error)
 			} else {
 				createSpanHendler('Wystąpił nieznany błąd')
@@ -184,11 +223,13 @@ const unsubscribeNewsLetter = async e => {
 	const form = e.target
 	const data = {
 		email: form.querySelector('[name="userEmailUs"]')?.value || '',
+		bbfCode: form.querySelector('[name="bbfCode"]')?.value || '',
 		checkbox: form.querySelector('input[name="checkboxUs"]:checked')?.value || '',
 	}
+	console.log(data);
 	sendingProccede.classList.add('active')
 	try {
-		const res = await fetch('/api/unsubscribe.php', {
+		const res = await fetch('/api/unsubscribe', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
