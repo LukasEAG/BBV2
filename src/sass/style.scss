@@ -301,6 +301,31 @@ section {
 		display: flex;
 		flex-direction: column;
 		gap: 4rem 0;
+
+		& h3 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			max-height: 115px;
+			height: 100%;
+			aspect-ratio: 2.23 / 1;
+			font-size: 4rem;
+			text-transform: uppercase;
+			background-image: url(../../dist/img/ticketBg.webp);
+		}
+		&:nth-of-type(1) h3 {
+			padding-right: 5rem;
+			color: var(--bb-purple);
+		}
+		&:nth-of-type(2) h3 {
+			padding-right: 5rem;
+			color: var(--bb-salmon);
+		}
+		&:nth-of-type(3) h3 {
+			padding-right: 4rem;
+			color: var(--bb-fluo);
+		}
 	}
 }
 .line-up {
@@ -326,6 +351,40 @@ section {
 		grid-template-rows: repeat(2, 1fr);
 		grid-template-columns: repeat(3, 1fr);
 		gap: 2.5rem 5rem;
+	}
+}
+.guide {
+	width: 100%;
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		flex: 1;
+	}
+	&__title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: url(../../dist/img/gudieTitleBg.webp);
+		background-size: contain;
+		background-repeat: no-repeat;
+		height: 100%;
+		width: 100%;
+		max-width: 409px;
+		max-height: 112px;
+		aspect-ratio: 3.65 / 1;
+
+		& h2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 2.4rem;
+			text-transform: uppercase;
+			color: var(--bb-salmon);
+			font-family: var(--font-first);
+		}
 	}
 }
 .email,
