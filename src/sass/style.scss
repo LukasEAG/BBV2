@@ -239,9 +239,7 @@ section {
 		}
 	}
 }
-#tickets {
-	padding: 0 0 10rem;
-}
+
 .tickets {
 	width: 100%;
 	background-image: url(../../dist/img/ticketsBg.webp);
@@ -276,9 +274,9 @@ section {
 	&__box {
 		display: flex;
 		flex-direction: column;
-		justify-content: end;
+		justify-content: center;
 		gap: 6rem 0;
-		height: 80%;
+		height: 60%;
 	}
 	&__title {
 		& h3 {
@@ -349,7 +347,7 @@ section {
 	&__cards-box {
 		display: grid;
 		grid-template-rows: repeat(2, 1fr);
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		gap: 2.5rem 5rem;
 	}
 }
