@@ -127,7 +127,7 @@ if (registrationForm) {
 }
 const checkRegLimit = async e => {
 	try {
-		const res = await fetch('/api/checkLimit', {
+		const res = await fetch('/api/limitMailing', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 		})
@@ -154,7 +154,7 @@ const sendFormToBackend = async e => {
 	}
 	sendingProccede.classList.add('active')
 	try {
-		const res = await fetch('/api/newsletter', {
+		const res = await fetch('/api/mailWrite', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(data),
@@ -223,13 +223,13 @@ const unsubscribeNewsLetter = async e => {
 	const form = e.target
 	const data = {
 		email: form.querySelector('[name="userEmailUs"]')?.value || '',
-		bbfCode: form.querySelector('[name="bbfCode"]')?.value || '',
+		bbfCode: form.querySelector('[name="nameUs"]')?.value || '',
 		checkbox: form.querySelector('input[name="checkboxUs"]:checked')?.value || '',
 	}
 	console.log(data);
 	sendingProccede.classList.add('active')
 	try {
-		const res = await fetch('/api/unsubscribe', {
+		const res = await fetch('/api/mailDelete', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
