@@ -22,7 +22,23 @@ html {
 body {
 	position: relative;
 	background: var(--bb-light-grey);
-	height: 100%;
+}
+.body {
+	&__graphics {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+
+		&--footer-face {
+			background: url(../../dist/img/footerFaceBg.webp);
+			background-size: 35%;
+			background-position: right -10px bottom -10px;
+			background-repeat: no-repeat;
+		}
+	}
 }
 
 :root {
@@ -81,6 +97,7 @@ section {
 	position: relative;
 	display: flex;
 	justify-content: center;
+	scroll-margin-top: var(--nav-height);
 }
 .divider {
 	position: relative;
@@ -343,7 +360,7 @@ section {
 
 		& button {
 			transform: scale(1);
-			transition: transform .4s;
+			transition: transform 0.4s;
 
 			&:hover {
 				transform: scale(1.1);
@@ -386,7 +403,7 @@ section {
 			font-size: 3.6rem;
 			text-transform: uppercase;
 			color: var(--bb-pink);
-			background: #DBCBB8;
+			background: #dbcbb8;
 			border-radius: 1.5rem;
 		}
 	}
@@ -467,7 +484,7 @@ section {
 	background-repeat: no-repeat;
 	background-size: contain;
 }
-.c-img{
+.c-img {
 	padding: 15rem 0 12rem;
 	position: relative;
 	display: flex;
@@ -919,7 +936,9 @@ section {
 		width: 100%;
 	}
 
-	&__bb-tv, &__bb-socials, &__bb-socials {
+	&__bb-tv,
+	&__bb-socials,
+	&__bb-socials {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
@@ -931,7 +950,7 @@ section {
 			font-size: 2.4rem;
 			text-transform: uppercase;
 			text-align: center;
-			letter-spacing: .5rem;
+			letter-spacing: 0.5rem;
 			color: var(--bb-salmon);
 		}
 	}
@@ -942,13 +961,13 @@ section {
 			font-family: var(--font-fourth);
 			font-size: 4rem;
 			text-transform: uppercase;
-			letter-spacing: .5rem;
+			letter-spacing: 0.5rem;
 			background: var(--bb-salmon);
 			border-radius: 10rem;
 		}
 	}
 	&__bb-socials {
-		gap: 4rem ;
+		gap: 4rem;
 		font-family: var(--font-fourth);
 		font-size: 3.2rem;
 		text-transform: uppercase;
@@ -997,23 +1016,6 @@ section {
 	height: 100%;
 	z-index: 0;
 
-	&__graphics {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-
-		&--bar-code {
-			background: url(../../dist/img/barCode.svg);
-			background-size: 180px;
-			background-position: right 100px center;
-			background-repeat: no-repeat;
-			opacity: 0.3;
-		}
-	}
-
 	&__container {
 		margin: 0 auto;
 		padding: 0rem 1rem 5rem;
@@ -1061,7 +1063,6 @@ section {
 		grid-template-columns: repeat(3, 1fr);
 		justify-items: center;
 		width: 100%;
-
 	}
 
 	&__placeDates {
