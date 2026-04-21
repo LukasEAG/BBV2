@@ -12,8 +12,39 @@
 				grid-column: span 2;
 			}
 		}
+		.tickets {
+			padding: 0 2rem 0;
+			&__dateAndPlace {
+				& :nth-of-type(1) {
+					font-size: 5.8rem;
+				}
+				& :nth-of-type(2) {
+					font-size: 2.2rem;
+				}
+			}
+			&__title h3 {
+				font-size: 2.8rem;
+			}
+			&__ticket-list {
+				padding: 4rem 0 2rem;
+			}
+
+			&__type {
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
 		.email {
 			padding: 7rem 0 0;
+		}
+		.media {
+			&__bb-title h2 {
+				font-size: 3.2rem;
+			}
+			&__bb-socials {
+				font-size: 2.8rem;
+			}
 		}
 		.footer {
 			&__graphics {
@@ -55,6 +86,29 @@
 				& a {
 					font-size: 2.2rem;
 				}
+			}
+		}
+		.tickets {
+			min-height: unset;
+		}
+		.media {
+			&__bb-socials, &__bb-tv {
+				justify-content: space-around;
+			}
+		}
+		.footer {
+			&__container {
+				gap: 0;
+			}
+			&__links {
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				gap: 3rem 0;
+			}
+			&__placeDates {
+				grid-row: 1;
+				grid-column: span 3;
+				text-align: center;
 			}
 		}
 	}
@@ -111,6 +165,9 @@
 				}
 			}
 		}
+		.guide {
+			padding: 0 2rem;
+		}
 		.contact {
 			top: 120px;
 		}
@@ -126,6 +183,19 @@
 				padding: 3rem 2rem;
 				flex-direction: column;
 				gap: 3rem;
+			}
+		}
+		.tickets {
+			background-size: cover;
+			&__box {
+				height: 75%;
+				gap: 2rem 0 ;
+			}
+			&__ticket-list {
+				flex-direction: column;
+			}
+			&__ticket {
+				width: 100%;
 			}
 		}
 		.email,
@@ -223,6 +293,9 @@
 		nav {
 			height: 60px;
 		}
+		.body__graphics--footer-face {
+			display: none;
+		}
 		.nav-menu {
 			&__container {
 				padding: 0.2rem 0 0;
@@ -238,9 +311,7 @@
 				}
 			}
 			&__logo img {
-				padding: 0.2rem 0 0;
-				max-height: 45px;
-				width: auto;
+				padding: 0 .5rem ;
 			}
 			&__others-link {
 				a {
@@ -264,6 +335,72 @@
 					font-size: 2rem;
 				}
 			}
+		}
+		.tickets {
+			background-size: cover;
+			background-position: 10% 0;
+			&__dateAndPlace {
+				padding: 2rem 1rem;
+				& :nth-of-type(1) {
+					font-size: 3.2rem;
+				}
+				& :nth-of-type(2) {
+					padding: 2rem 3rem;
+					font-size: 1.6rem;
+					text-align: center;
+				}
+			}
+			&__title {
+				& h3 {
+					padding: 1rem 4rem;
+					font-size: 2.2rem;
+				}
+			}
+			&__box {
+				gap: 2rem 0;
+			}
+			&__ticket-list {
+				flex-direction: column;
+			}
+			&__type {
+				width: 100%;
+				text-align: center;
+				font-size: 2.2rem;
+			}
+			&__ticket {
+				margin: 0 0 2rem;
+				gap: 1rem 0;
+
+				& h3 {
+					aspect-ratio: 2 / 1;
+					max-width: 250px;
+					max-height: 110px;
+					font-size: 2.8rem;
+				}
+				& span {
+					font-size: 2.8rem;
+				}
+			}
+		}
+		.guide {
+			padding: 2rem 1rem;
+			&__title h2 {
+				font-size: 1.6rem;
+			}
+			&__container {
+				padding: 0 1rem;
+				gap: 3rem 0;
+			}
+			&__list-items {
+				gap: 1.6rem;
+			}
+
+			&__item {
+				font-size: 2rem;
+			}
+		}
+		.divider {
+			display: none;
 		}
 		.email,
 		.newsletter-delete {
@@ -299,6 +436,29 @@
 				text-align: center;
 			}
 		}
+		.media {
+			padding: 3rem 1rem 0;
+			&__bb-tv {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 6rem;
+
+				& h3 {
+					font-size: 1.8rem;
+				}
+			}
+			&__bb-title h2 {
+				font-size: 2rem;
+				text-align: center;
+			}
+			&__bb-socials {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				font-size: 2.2rem;
+			}
+		}
 		.contact {
 			top: 100px;
 			.close-contact {
@@ -324,6 +484,8 @@
 			}
 		}
 		.footer {
+			padding: 4rem 0 0;
+
 			&__graphics {
 				&--bar-code {
 					background-size: 140px;
@@ -331,29 +493,50 @@
 				}
 			}
 			&__container {
+				display: none;
+			}
+			&__container.mobile {
 				padding: 2rem 1rem 1rem;
-				grid-template-rows: 1fr 1fr 70px;
-
+				display: grid;
+				min-height: 600px;
+				background: url(../img/footerFaceBg.webp);
+				background-size: 620px;
+				background-position: 0% -5%;
+				background-repeat: no-repeat;
+				grid-template-rows: 4fr 1fr 1fr;
 				& a {
-					font-size: 1.5rem;
+					font-size: 1.2rem;
 				}
-			}
-			&__dot,
-			&__bb {
-				text-align: center;
-			}
-			&__dot {
-				padding: 2rem 0 1rem;
-			}
-			&__bb {
-				padding: 1rem 0 2rem;
-			}
-			&__logos {
-				padding: 2rem 0;
-				gap: 1rem 0;
 
-				& img {
-					max-height: 30px;
+				& .footer {
+					&__links {
+						grid-template-columns: 1fr;
+						grid-template-rows: repeat(2, 1fr);
+						gap: 1rem 0;
+					}
+					&__placeDates {
+						font-size: 1.8rem;
+						letter-spacing: 0.4rem;
+						width: 100%;
+						height: 100%;
+						justify-content: flex-start;
+						grid-row: unset;
+						grid-column: unset;
+						text-align: left;
+					}
+					&__dot,
+					&__bb {
+						padding: 1rem 0;
+						text-align: center;
+					}
+					&__logos {
+						padding: 2rem 0;
+						gap: 1rem 0;
+
+						& img {
+							max-height: 30px;
+						}
+					}
 				}
 			}
 		}
