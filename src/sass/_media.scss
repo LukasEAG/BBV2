@@ -92,7 +92,8 @@
 			min-height: unset;
 		}
 		.media {
-			&__bb-socials, &__bb-tv {
+			&__bb-socials,
+			&__bb-tv {
 				justify-content: space-around;
 			}
 		}
@@ -189,13 +190,30 @@
 			background-size: cover;
 			&__box {
 				height: 75%;
-				gap: 2rem 0 ;
+				gap: 2rem 0;
 			}
 			&__ticket-list {
 				flex-direction: column;
 			}
 			&__ticket {
 				width: 100%;
+			}
+		}
+		.line-up {
+			&__track {
+				position: relative;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+				align-self: flex-start;
+				gap: 0;
+				left: 50%;
+				transform: translateX(-207px);
+			}
+			&__cards img {
+				padding: 0 2rem;
+			}
+			&__dots {
+				display: flex;
 			}
 		}
 		.email,
@@ -311,7 +329,7 @@
 				}
 			}
 			&__logo img {
-				padding: 0 .5rem ;
+				padding: 0 0.5rem;
 			}
 			&__others-link {
 				a {
@@ -382,6 +400,7 @@
 				}
 			}
 		}
+
 		.guide {
 			padding: 2rem 1rem;
 			&__title h2 {

@@ -177,7 +177,7 @@ section {
 	}
 	&__others {
 		display: flex;
-		justify-content: flex-start;
+		justify-content: flex-end;
 		align-items: center;
 	}
 
@@ -412,10 +412,40 @@ section {
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		// display: grid;
-		// grid-template-rows: repeat(2, 1fr);
-		// grid-template-columns: repeat(3, 1fr);
 		gap: 2.5rem 4rem;
+	}
+	&__track {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+	}
+	&__cards {
+		transition: transform 0.4s ease;
+	}
+	&__dots {
+		padding: 1.2rem 2rem;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		background: #0000007a;
+		border-radius: 1rem;
+
+		& li {
+			margin: 0 1rem;
+			width: 20px;
+			height: 20px;
+			background: white;
+			border-radius: 50%;
+			transition: all .4s;
+
+			&.active {
+				border-radius: 2rem;
+				width: 40px;
+				background: var(--bb-pink);
+			}
+		}
 	}
 }
 .guide {
@@ -977,7 +1007,7 @@ section {
 
 		& a {
 			color: var(--bb-black);
-			transition: color .4s;
+			transition: color 0.4s;
 
 			&:hover {
 				color: var(--bb-white);
