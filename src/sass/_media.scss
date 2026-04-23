@@ -272,7 +272,7 @@
 		}
 		.contact {
 			&__box {
-				padding: 2rem;
+				padding: 6rem 2rem;
 				& img {
 					padding-bottom: 5rem;
 					max-width: 125px;
@@ -301,6 +301,11 @@
 				& span {
 					font-size: 2rem;
 				}
+			}
+			.close-contact {
+				padding: 0.7rem;
+				width: 35px;
+				border-radius: 0.9rem;
 			}
 		}
 	}
@@ -480,10 +485,18 @@
 		}
 		.contact {
 			top: 100px;
-			.close-contact {
-				padding: 0.7rem;
-				width: 35px;
-				border-radius: 0.9rem;
+		}
+		.statute {
+			margin: var(--nav-height) auto 0;
+			h2 {
+				padding: 1rem 0 2rem;
+				font-size: 2.8rem;
+			}
+			h3,h4 {
+				font-size: 2rem;
+			}
+			span, li {
+				font-size: 1.6rem;
 			}
 		}
 		.privacyPolicy {

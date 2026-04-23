@@ -43,9 +43,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 
+// :root {
+// 	--font-first: 'BoldPixels', 'GNUUnifont', 'Dogica', monospace;
+// 	--font-second: 'Dogica', 'GNUUnifont', monospace;
+// 	--font-third: 'GNUUnifont', 'Dogica', monospace;
+// 	--font-fourth: "Righteous", sans-serif;
+// }
 :root {
-	--font-first: 'BoldPixels', 'GNUUnifont', 'Dogica', monospace;
-	--font-second: 'Dogica', 'GNUUnifont', monospace;
-	--font-third: 'GNUUnifont', 'Dogica', monospace;
+	--font-first: "Righteous", sans-serif;
+	--font-second: "Righteous", sans-serif;
+	--font-third: "Righteous", sans-serif;
 	--font-fourth: "Righteous", sans-serif;
 }

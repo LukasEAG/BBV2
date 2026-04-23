@@ -438,7 +438,7 @@ section {
 			height: 1.6rem;
 			background: white;
 			border-radius: 50%;
-			transition: all .4s;
+			transition: all 0.4s;
 
 			&.active {
 				border-radius: 2rem;
@@ -475,7 +475,7 @@ section {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			font-size: 2.4rem;
+			font-size: 1.8rem;
 			letter-spacing: 0.3rem;
 			text-transform: uppercase;
 			color: var(--bb-salmon);
@@ -864,7 +864,7 @@ section {
 
 	&__box {
 		margin: 0 auto;
-		padding: 2rem 0;
+		padding: 8rem 0 2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -1015,7 +1015,43 @@ section {
 		}
 	}
 }
-
+.statute {
+	margin: var(--nav-height) auto 5rem;
+	padding: 2rem 3rem;
+	position: relative;
+	list-style-position: inside;
+	&__box {
+		max-width: 960px;
+	}
+	h2 {
+		padding: 1rem 0 2rem;
+		font-size: 3.6rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	h3,
+	h4 {
+		padding: 2rem 0 0.7rem;
+		font-size: 2.6rem;
+		letter-spacing: 0.2rem;
+		font-weight: 400;
+	}
+	span {
+		padding: 0.2rem 0;
+		display: block;
+		font-size: 1.8rem;
+		letter-spacing: 0.1rem;
+	}
+	ul {
+		margin-left: 3rem;
+	}
+	li {
+		font-size: 1.8rem;
+		list-style: inherit;
+		letter-spacing: 0.1rem;
+		list-style-type: circle;
+	}
+}
 .privacyPolicy {
 	margin: var(--nav-height) auto 5rem;
 	padding: 2rem 3rem;
@@ -1132,7 +1168,7 @@ section {
 		font-size: 2rem;
 	}
 }
-.nav-menu .not-active a {
+.not-active a {
 	cursor: default;
 	filter: opacity(0.5);
 }
