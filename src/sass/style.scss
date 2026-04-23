@@ -1118,6 +1118,20 @@ section {
 	}
 }
 
+.unsubscribe-succes {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 55vh;
+	z-index: 0;
+
+	& h2 {
+		text-align: center;
+		font-size: 2rem;
+	}
+}
 .nav-menu .not-active a {
 	cursor: default;
 	filter: opacity(0.5);

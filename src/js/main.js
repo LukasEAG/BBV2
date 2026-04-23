@@ -97,6 +97,7 @@ const closePopupBtn = document.querySelector('[close-popup-btn]')
 let formBlocked = false
 
 const createSpanHendler = msg => {
+	console.log('creaate span', msg)
 	const span = document.createElement('span')
 	span.classList.add('form-popup__container--msg')
 	span.innerText = msg
@@ -105,6 +106,7 @@ const createSpanHendler = msg => {
 	regFormPopup.classList.add('active')
 }
 const blockFormHendler = msg => {
+	console.log('blcok span', msg)
 	formBlocked = true
 	const span = document.createElement('span')
 	span.classList.add('form-popup__container--msg')
@@ -127,7 +129,7 @@ if (registrationForm) {
 }
 const checkRegLimit = async e => {
 	try {
-		const res = await fetch('/api/checkLimit', {
+		const res = await fetch('/api/limitMailing', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 		})
@@ -154,7 +156,7 @@ const sendFormToBackend = async e => {
 	}
 	sendingProccede.classList.add('active')
 	try {
-		const res = await fetch('/api/newsletter', {
+		const res = await fetch('/api/mailWrite', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(data),
@@ -179,7 +181,8 @@ Do zobaczenia nad wodą! 🌊 #BliskoBrzegu #DoZobaczenia`)
 				})
 
 				lastErrors = errors
-			} else if (!json.allowed) {
+			} else if (json.allowed === false) {
+				console.log(json)
 				blockFormHendler(json.message)
 			} else if (json.error) {
 				console.log(json.error)
@@ -223,13 +226,13 @@ const unsubscribeNewsLetter = async e => {
 	const form = e.target
 	const data = {
 		email: form.querySelector('[name="userEmailUs"]')?.value || '',
-		bbfCode: form.querySelector('[name="bbfCode"]')?.value || '',
+		name: form.querySelector('[name="userNameUs"]')?.value || '',
 		checkbox: form.querySelector('input[name="checkboxUs"]:checked')?.value || '',
 	}
-	console.log(data);
+	console.log(data)
 	sendingProccede.classList.add('active')
 	try {
-		const res = await fetch('/api/unsubscribe', {
+		const res = await fetch('/api/unsubscribeMail', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -240,7 +243,7 @@ const unsubscribeNewsLetter = async e => {
 
 		if (res.ok) {
 			createSpanHendler(`
-Zostałeś usunięty z naszego newslettera`)
+Na twojego maila został wysłany link do wypisania się z newslettera`)
 
 			lastErrors = {}
 		} else {
