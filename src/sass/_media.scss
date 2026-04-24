@@ -212,6 +212,9 @@
 			&__cards img {
 				padding: 0 2rem;
 			}
+			&__cards-back {
+				width: 90%;
+			}
 			&__dots {
 				display: flex;
 			}
@@ -492,10 +495,12 @@
 				padding: 1rem 0 2rem;
 				font-size: 2.8rem;
 			}
-			h3,h4 {
+			h3,
+			h4 {
 				font-size: 2rem;
 			}
-			span, li {
+			span,
+			li {
 				font-size: 1.6rem;
 			}
 		}
