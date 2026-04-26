@@ -443,6 +443,7 @@ section {
 		}
 	}
 	&__cards-back {
+		padding: 1rem;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -452,10 +453,11 @@ section {
 		align-items: center;
 		gap: 3rem;
 		transform: translate(-50%, -50%);
-		width: 101%;
+		width: 95%;
 		height: 100%;
 		background: url(../../dist/img/lineUpBackCard.webp);
 		background-size: cover;
+		border-radius: 4rem;
 		clip-path: circle(0% at 50% 100%);
 		transition: clip-path 0.8s;
 		will-change: clip-path;
