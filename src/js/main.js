@@ -11,6 +11,7 @@ const contactDiv = document.querySelector('#contact')
 const btnCloseContact = document.querySelectorAll('[btnCloseContact]')
 const submitButton = document.querySelector('.email__submit')
 const homeBtn = document.querySelectorAll('[btnHome]')
+const isMobile = window.innerWidth <= 992
 
 const navBarBgHandler = () => {
 	if (window.scrollY > 10) {
@@ -42,8 +43,14 @@ const openContactHandler = () => {
 }
 
 const closeContactHandler = () => {
+	console.log('jest')
 	contactDiv.classList.remove('active')
 	body.classList.remove('menuActive')
+	if (isMobile) {
+		mobileNav.classList.remove('active')
+		contactDiv.classList.remove('active')
+		body.classList.remove('menuActive')
+	}
 }
 const isContactOpen = () => contactDiv.classList.contains('active')
 
@@ -51,16 +58,14 @@ menuBtns.forEach(btn => {
 	btn.addEventListener('click', e => {
 		const btnLink = btn.querySelector('a')
 		const href = btnLink ? btnLink.getAttribute('href') : null
-		const isMobile = window.innerWidth <= 992
 
 		if (href === '#contact') {
+			console.log('tak')
 			isContactOpen() ? closeContactHandler() : openContactHandler()
 			if (isMobile) navHandler()
 		} else {
-			if (isContactOpen()) {
-				closeContactHandler()
-			}
-			if (isMobile) navHandler()
+			console.log('nie')
+			closeContactHandler()
 		}
 	})
 })
@@ -97,7 +102,6 @@ const closePopupBtn = document.querySelector('[close-popup-btn]')
 let formBlocked = false
 
 const createSpanHendler = msg => {
-	console.log('creaate span', msg)
 	const span = document.createElement('span')
 	span.classList.add('form-popup__container--msg')
 	span.innerText = msg
@@ -402,7 +406,7 @@ const media = window.matchMedia('(max-width: 768px)')
 function handleSlider(e) {
 	if (e.matches) {
 		if (!sliderInitialized) {
-			lineUpSliderHendler() 
+			lineUpSliderHendler()
 			sliderInitialized = true
 		}
 	} else {
@@ -413,10 +417,8 @@ function handleSlider(e) {
 	}
 }
 
-
 handleSlider(media)
 media.addEventListener('change', handleSlider)
-
 
 const footerYear = document.querySelector('.footer__foot-year')
 const handleCurrentYear = () => {
