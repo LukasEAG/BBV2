@@ -141,6 +141,17 @@
 			}
 			&__logo {
 				justify-content: flex-start;
+
+				& img {
+					max-width: unset;
+				}
+				.desktop {
+					display: none;
+				}
+
+				.mobile {
+					display: block;
+				}
 			}
 
 			&__others {
