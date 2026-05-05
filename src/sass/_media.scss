@@ -613,6 +613,12 @@
 				background-position: left -50px top 50px;
 			}
 		}
+				.guide {
+			&__title h2 {
+				font-size: 1rem;
+			}
+			
+		}
 	}
 	@media (orientation: portrait) {
 		.header {
